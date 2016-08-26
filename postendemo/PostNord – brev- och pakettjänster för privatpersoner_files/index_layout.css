@@ -1,0 +1,11 @@
+﻿
+/* No main menu background */
+div#s4-bodyContainer,
+#s4-bodyContainer
+{
+    background: url('../../images/PostNordCommon/body_bg_index.png') repeat-x #f6f3ed !important;
+}
+
+/* Min-height for flyout */
+div#Body {min-height:730px;}
+

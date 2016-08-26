@@ -1,0 +1,1524 @@
+
+/* Purpose of this is file is to fix what was broken by BETA7 */
+/* This is only a temporary file, changes must be aligned with the designer - added extra space in this line*/
+
+#s4-bodyContainer {font-size:14px;}                     /* For Calibri */
+#Body {margin-top:20px; padding-bottom:20px;}           /* webmanual p.77 */
+#Body, #Foot, .logo {display:block;}                    /* inline-block is buggy */
+#GlobalMenu {max-height:27px; overflow:visible;}        /* webmanual p.37 */
+#MainMenu + #Body {	top: 0; }                           /* Use margin not negetive top */
+.box.colspan-5 { width: 920px; }                        /* 930 less 10 left margin */
+.box {margin-left:10px}                                 /* Primarily for right area */
+div.article,div.welcome {padding:0;} 	                /* article and padding are OOB classe */
+div.module {margin-left:0;} 			                /* Container already padded left, margin not needed */
+.module .foot a, .ms-WPBody .posten-rteElement-LINK a, .ms-WPBody .ms-rteElement-LINK a {color:#333;}                           /* Common */
+a.link, li.menu:hover, img[onclick], li[onclick] {cursor:pointer;}   /* Some links are onclick, TODO: unobtrusive */
+a.link, a.link:hover {background-position:right 6px;}
+div.ms-rtestate-field a:hover {text-decoration:none;}
+
+
+/* Fix typography and rich text editors */
+h1, .ms-WPBody h1 {font-size:28px; font-weight:normal;}
+h2, .ms-WPBody h2 {font-size:22px; font-weight:normal; line-height:28px; margin:20px 0 5px;}
+h3, .ms-WPBody h3 {font-size:18px; font-weight:bold; line-height:28px; margin:14px 0 5px; font-family: Calibri, 'CalibriLiteBold', sans-serif;}
+h4, .ms-WPBody h4 {font-size:16px; font-weight:bold; font-style:normal; line-height:28px; margin:14px 0 5px; font-family: Calibri, 'CalibriLiteBold', sans-serif;}
+.ms-WPBody p, p.ms-rteElement-P {margin:0 0 18px; color:#333;}
+
+
+/* Fix styles that are too global */
+p {padding:0;}                                          
+input[type="text"] {width:auto; height:auto; line-height:inherit; }
+.extension.info p {margin:0 10px;}
+#Body .box {min-height:0;}
+
+
+/* Better to use images for IE9 */
+.gradientTetriary {
+  background: #f6f3ed url("../../../images/posten/spritemap_footer.png") repeat-x 0 -229px;
+  background: -moz-linear-gradient(top, white 0%, #f6f3ed 100%);
+  background: -webkit-linear-gradient(top, white 0%, #f6f3ed 100%);
+  background: -o-linear-gradient(top, white 0%, #f6f3ed 100%);
+  background: -ms-linear-gradient(top, white 0%, #f6f3ed 100%);
+  background: linear-gradient(top, white 0%, #f6f3ed 100%);
+}
+
+
+/* Resets from common.css */
+body, select, textarea, .ms-WPBody {font-family: Calibri, 'CalibriLite', Arial, sans-serif; font-size:14px}
+ul, ol, li {margin:0; padding: 0;}
+#tabContents ul {list-style-type: disc;}
+img {border:none}
+
+
+/* Overlooked combinations */
+div.ms-PartSpacingHorizontal {width:10px;}
+.box .box + .box {margin-left: 10px;}
+.s4-wpcell + .s4-wpcell .box, .s4-wpActive + .s4-wpcell .box, .s4-wpcell + .s4-spActive .box {margin-left:8px;}
+
+
+/* Table-based OR clean webpart zones */
+.ms-WPBody .box, .box > .box:first-child, .colspan-2 .colspan-2, .colspan-3 .colspan-3, .colspan-4 .colspan-4, .box .colspan-4 + .colspan-4 {margin-left:0;}
+.AspNet-WebPartZone-Horizontal {clear:both;}
+.AspNet-WebPartZone-Horizontal > div:first-child .box, .AspNet-WebPartZone-Vertical > div:first-child .box {margin-left:0;}
+.colspan-1 + .colspan-2, .colspan-2 + .colspan-2,
+.colspan-1 + .colspan-3 {margin-left:10px; display:inline-block;} /*W04_13 - adjacent webparts in the same webpart zone*/
+
+/* Modules */
+.module .content .head > h4 {font-size:16px; max-width:87%; word-wrap:break-word; line-height:16px; margin:0;}	                        /* webmanual p.25 */
+.module.campaign .foot {height:auto; min-height:14px;}
+.module .foot a.text:hover {color:#333333; cursor:text;}
+.module .foot a.text  {color:#333333;}
+
+/* #Foot */
+#Foot {height: 190px; z-index:auto; padding:10px 10px 20px 0;}          /* z-index is not needed */
+#Foot a {color: #999;}
+#Foot h2 a, #Foot .more a {color: #666;}
+#Foot h2 {font-size:16px; font-weight:bold; line-height:16px; margin-top:0;}
+#Foot .box .logo {margin-bottom:14px}                                   /* correct margin */		                       	
+#Foot .box { margin: 15px 0 0; height: 185px;}                           /* correct dimensions */
+#Caption {font-size:12px;}
+
+/* #Main Menu */
+#MainMenu {height:46px; margin:0 10px; width: 924px;}                   /* webmanual p.28 */
+#MainMenu li {display:inline-block; float:none;}                        /* to prevent overflow */
+#MainMenu li.selected a, #MainMenu li:hover a {color:#EEE;}
+#MainMenu a {height:36px; padding:0 14px; outline:none; color:#666;}
+#MainMenu + #Body {margin-top:10px;}
+#MainMenu .selected .additional-background {padding-bottom:30px;}
+#MainMenu .menu-horizontal, #MainMenu .menu-horizontal ul.static {display:block; white-space:nowrap;}
+#MainMenu li {text-transform:uppercase;}
+#MainMenu li a, #MainMenu li span {font-weight: bold; /* requested to be normal Oct 13 then reverted again */ font-size: 16px; line-height:36px;}
+#MainMenu .menu a.menu-item span.additional-background {cursor:default;}
+#MainMenu li + li {background:url('../../../images/posten/dividers/vertical_27.png') 0 50% no-repeat;}
+
+/* TreeView */
+.treeView li.selected > ul {display:block;}
+.treeView > div > ul > li:first-child {font-size:16px; line-height:22px; font-weight:bold; padding-top:24px;}
+.treeView > div > ul > li:first-child > ul {border-top: 2px solid #dbd4c5; margin-top:14px;}
+.treeView a {outline:none;}
+.treeView li li {font-size: 14px; line-height:16px; font-weight:bold; margin:12px 0;}
+.treeView li li li {font-weight:normal;}
+.treeView li li li a {margin-left:10px;}
+.treeView li li ul {display:none; border-top:2px solid #dbd4c5; border-bottom:2px solid #dbd4c5; margin:12px 0;}
+.treeView li li li ul {border:none; margin-left:10px;}
+.treeView li a > span {padding-left: 14px;}
+.treeView li .selected .with-children > span, .with-children:hover > span {background-position: -551px 0; /* beta6 */ background-repeat:no-repeat;}
+.treeView .active > a:link > span {background-position: -590px 0;   /* beta6 */}
+.treeView a > span span {background:#fff;}
+.treeView .menu .goBack > span {background-position:-207px -39px;}  /* webmanual */
+.treeView a {color:#666;}                                           /* webmanual p.40 */
+.treeView .menu li a > span {background-position: 15px 0;}
+.treeView .menu li .with-children:hover > span {background-position: -130px -41px;} /* beta7 */
+.treeView .menu li .selected > .with-children > span, .treeView .menu .active > a:link > span {background-position: -167px -41px;}		/* beta7 */
+.treeView .menu ul.static li.active > a.with-children span{background-position: -167px -41px;}  /* Fixed defect #517 */
+
+/* Accordion */
+.ms-WPBody ul.accordion {padding-left:0; margin-bottom:0;}      /* because .ms-WPBody was set */
+.accordion li.menu .arrow.large {width:13px; height:13px;}
+.faq ul li, .faq ul li.menu a {display:block;}
+.quickFinder .accordion li.area {padding-right:14px;} /* , .quickFinder .accordion li.menu a */
+.faq li.menu {padding:14px;}
+.faq li.menu span.arrow {background:url('../../../images/posten/spritemap_common_b7.png') no-repeat -120px -187px; top:4px;}
+.faq li.menu.active span.arrow {background-position: -46px -187px;}
+.faq .question {position:relative; padding-right: 30px;}
+.faq .question .a * {font-size:14px;}                               /* override rich text */
+.faq .answer {display: block; font-weight:normal;}
+.faq .indent {padding:0; display: block; position:static;}
+.faq .indent > span {position:relative; top:-1px; z-index:10;}
+.module.faq.categories .content .body.category h5 {margin:0 0 6px; font-size:18px; color:#333; padding-left: 14px;}
+.faq select {min-width:70%; padding:1px 0 1px 1px; margin-left:14px; border:1px solid #DBD4C5; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.module.faq.list .content .body { min-height:27px; }
+.module.faq.list .content .foot { min-height:17px; }
+.module.faq.list .content .body .accordion li { padding: 5px 14px; display: block; }
+.module.faq.list .content .body .accordion li p { padding-left: 0px; }
+.module.faq.list .content .body .accordion li.menu { padding-left: 0px; padding-right: 0px; }
+.module.faq.categories .content .body p {margin:0;}
+.module.faq.categories .content .body.padded { padding: 10px 0 30px; height: 29px;}
+
+.webAssistant p, .quickFinder p, .mainCampaign p, .faq .categories p {margin: 0;}
+.quickFinder p {padding:5px 14px; clear:right; overflow:hidden;}
+
+
+/* SharePoint Edit Mode */
+
+/* Hide unused areas */
+#MSOTlPn_WebPartPageDiv #Head, #MSOTlPn_WebPartPageDiv #MainMenu, #MSOTlPn_WebPartPageDiv #Foot, #MSOTlPn_WebPartPageDiv #Caption { display: none; }
+
+/* Add a Web Part */ /* Web parts */
+.ms-WPAddButton {margin:4px; width:auto;}
+
+/* Editing */
+.ms-SPZone td.ms-WPBorder {overflow: hidden;}
+.ms-formfieldlabelcontainer, .ms-formfieldvaluecontainer {margin-left:0; margin-right:0; line-height:16px;}
+.ms-wpadder-sectionhead {font-size:14px;}
+table.ms-SPZone, .ms-SPZone table {border-collapse:collapse;}
+table.s4-wpTopTable, td.ms-WPBorder {border:0;}
+table.ms-ToolPaneOuter {position:relative; z-index:100;}
+.ms-toolpanefooter {padding-bottom:25px;} /* allow user to see the wp editor buttons (ok, cancel, apply) always */
+.headline .ms-formfieldvaluecontainer {padding:0;}
+
+/* Minus web part and zone borders */
+table.ms-SPZone .ms-WPBody .box {width:174px;}
+table.ms-SPZone .ms-WPBody .box.colspan-2 {width: 360px;}
+table.ms-SPZone .ms-WPBody .box.colspan-3 {width: 544px;}
+table.ms-SPZone .ms-WPBody .box.colspan-4 {width: 728px;}
+table.ms-SPZone .ms-WPBody .box.colspan-5 {width: 920px;}
+
+
+/* Restore SharePoint UI */
+#s4-statusbarcontainer #pageStatusBar { font-size: 11px; }
+.ms-WPTitle span {color:#0072BC; }
+.ms-WPTitle span, .ms-formfieldlabelcontainer span {color: #777; font-size:12px; font-style: normal; display:inline; }
+.ms-dlgTitleText {font-size:14px;}
+
+.ms-vb2, .ms-vb2 select, a.colspanManagerToggle {font:11px Verdana, sans-serif;}
+
+/* Browse webpart */
+.ms-wpadder-sectionhead, .ms-wpadder-wpname { font-size: 14px;}
+
+/* Editor custom html editor */ /* SCOPE THIS */
+.ms-ToolPaneBody div.ms-rtestate-write { color: #333; padding:2px; border:1px solid #ccc; }
+
+/* Editor controls */
+.ms-TPBody input, .ms-TPBody select { font: 11px Verdana, Sans-Serif;}
+
+/* Image selector text */
+.ms-toolbarContainer .ms-toolbarItem.ms-selectorlink a { white-space: normal !important; font-size: 11px; }
+
+/* Rich field tab label */
+.module .content .ms-formfieldlabelcontainer { line-height: 14px;}
+
+/* Username */
+.ms-welcomeMenu { font-size:12px; }
+
+/* Links */
+.ms-SPButton a:link, .ms-SPButton a:visited {color:#0072BC;}
+
+/* Dialog */
+.ms-dlgContent {font-family: Verdana,sans-serif; font-size:8pt; color:#676767;}
+
+/* Unnecessary */
+.ms-wpContentDivSpace {margin-left:0; margin-right:0;}
+
+/* td#MSOZone_EmptyZoneCell {display:none;}  */
+.colspanManager > input[type="submit"] {font:12px sans-serif;}
+
+.ms-TPBody .custom span.UserSectionHead {display:block;}
+.ms-TPBody .custom .ms-ButtonHeightWidth {width:auto;}
+
+.box .ms-WPHeaderTd .ms-standardheader {max-width:120px; overflow:visible;}
+.colspan-3 .ms-WPHeaderTd .ms-standardheader {max-width:130px;}
+
+
+/* For webpart errors */
+/*
+.box div[errorwebpart=1] {overflow:scroll; width:172px;}
+.box.colspan-2 div[errorwebpart=1] {width:358px;}
+.box.colspan-2 div[errorwebpart=1] {width:544px;}
+.box.colspan-4 div[errorwebpart=1] {width:730px;}
+*/
+
+/* Restore */
+h3 > .ms-formfieldcontainer {margin-left: -10px;}
+h4, .ms-WPBody h4 { position:static; bottom:auto;}              /* don't apply to all h4, scope instead */
+.module .head > h4 { position:absolute; bottom:7px; margin:0;}  /* don't apply to all h4, scope instead */
+h5, .ms-WPBody h5 {padding:0;}
+.ms-WPBody a:hover {text-decoration:none;}
+.ms-formfieldvaluecontainer > span {display: block;}
+.ms-formfieldvaluecontainer > span > textarea {width: 98%;}
+#statechangedialog textarea {font-family: monospace}
+
+
+/* Carousel */
+/* Bundle Offer */
+.box.colspan-3 > .carousel .bundle-item p.floatRight {max-width: 85px;}     
+.box.colspan-4 > .carousel .bundle-item p.floatRight {max-width: 110px;}    
+.module.carousel .content .body > .left {width:34px;}
+.module.carousel .content .body > .right {width:33px;}
+.carousel h4, .carousel h5 {margin:0;}
+
+.module.bundleOffer.carousel .content .body p.floatRight {height:61px; padding-right:0; overflow:hidden;}
+.module.bundleOffer.carousel .bundle-item {padding:0 14px;}
+.module.bundleOffer.carousel .center {min-height:89px;}                     
+.module.bundleOffer.carousel .content .body p {margin:0;}
+.module.bundleOffer.carousel .content .body ul li {padding:14px 0;}         
+.module.bundleOffer.carousel .foot {min-height:17px;}
+
+.module.bundleOffer .bundle-item span.logo {
+    background-position: right 5px;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    position: absolute;
+    padding-left: 5px;
+    width:5px; height:14px;
+    display:inline;
+}
+
+.module.bundleOffer .bundle-item span.logo.common {
+    background: url(../../../images/posten/spritemap_common_beta8.png) no-repeat right 5px;
+    padding-left: 5px;
+    position: absolute;
+    width:5px; height:14px;
+    display:inline;
+}
+
+
+/* Campagin Carousel */
+.module.campaigncarousel .content .head > h4 {
+  color: Black;
+}
+
+.module.campaigncarousel ul {
+  overflow: hidden;
+  margin: 0;
+}
+/*.module.campaigncarousel ul li {
+  width: 333px;
+}*/
+.box.colspan-2 .module.campaigncarousel ul > li {
+  width: 290px;
+}
+.box.colspan-3 .module.campaigncarousel li {
+  width: 466px;
+}
+.module.campaigncarousel .foot{min-height: 17px;}
+/*.module.campaigncarousel .center{text-align: center;}*/
+
+.module.campaigncarousel .content .body {
+  overflow: hidden;
+  position: relative;
+  min-height: 90px;  
+}
+
+.module.campaigncarousel .content .body > .center {
+  margin: 0 36px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.module.campaigncarousel .content .body > .center:after {
+  clear: left;
+}
+.module.campaigncarousel .content .body > .left, .module.carousel .content .body > .right {
+  width: 36px;
+  top: 0px;
+  height: 100%;
+  position: absolute;
+  background: url('../../images/posten/dividers/vertical_87.png') left center no-repeat;
+}
+.module.campaigncarousel .content .body > .left {
+  left: 0px;
+  background-position: right center;
+}
+.module.campaigncarousel .content .body > .right {
+  right: 0px;
+  background-position: left center;
+}
+.module.campaigncarousel .content .body ul {
+  list-style: none;
+  width: 2000px;
+}
+.module.campaigncarousel .content .body ul li {
+  float: left;
+  padding: 10px 6px 0 4px;
+  overflow: hidden;
+  margin: 0px;  
+}
+
+.module.campaigncarousel .content .body ul li + li {
+  background: url('../../images/posten/dividers/vertical_87.png') left center no-repeat;
+}
+
+.module.campaigncarousel .content .bundle-item  > .campaign-bundle-img
+{     
+    height: 100%;   
+}
+
+.module.campaigncarousel .content .bundle-item > .campaign-bundle-lnk
+{
+    max-height: 24px;
+    display: block;
+    margin-top: -27px;
+    background-color: #F6F3ED;
+    float: left;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    vertical-align: text-bottom;
+}
+
+.module.campaigncarousel .content .campaign-bundle-lnk > a
+{
+    color: Black;    
+}
+
+.module.campaigncarousel .bundle-item
+{
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*
+.box.colspan-2 > .campaigncarousel .bundle-item p{max-width: 290px;}     
+.box.colspan-3 > .campaigncarousel .bundle-item p{max-width: 460px;}    
+.campaigncarousel .content .body .left {width:36px;}
+.campaigncarousel .content .body .right {width:36px;}
+.module.campaigncarousel .center {min-height:89px;}
+.module.campaigncarousel .content .body p {padding-right:0; overflow:hidden;}
+
+.module.campaigncarousel .bundle-item {padding:0 14px 0 14px;}
+
+.module.campaigncarousel .content .body ul li {padding:14px 0;}         
+.module.campaigncarousel .foot {min-height:17px;}
+
+*/
+
+/* Center Console Menu */
+div.consoleMenu {margin-bottom:20px;}
+#CenterMenu .column { height:178px; width:155px;}
+#CenterMenu .flyouts .content .head .close {position:absolute; top:14px; right:14px; margin:0;}
+#CenterMenu .consoles li {padding:10px 14px;}                                   /* webmanual p.46 */
+#CenterMenu .consoles h4 {line-height:16px; margin:0; width:170px; left:14px; padding:0; background:url('../../../images/posten/arrow_common_right_white.png') right bottom no-repeat;}
+#CenterMenu .consoles h4 a {padding-right:7px;}
+#CenterMenu .consoles, #CenterMenu .consoles .content {overflow:visible;}                   /* for indent */
+#CenterMenu .consoles .content {width:186px; left:auto;}     
+#CenterMenu .consoles .content .head {cursor:pointer;}
+#CenterMenu .consoles .content:first-child, #CenterMenu .consoles .content.nth-4 {width:176px;} /* known IE headache if combined */
+#CenterMenu .consoles .content:first-child {margin-right:10px;} /*fixed distance web manual p.46*/
+#CenterMenu .consoles .nth-2 .body, #CenterMenu .consoles .nth-2 .foot,
+#CenterMenu .consoles .nth-3 .body, #CenterMenu .consoles .nth-3 .foot {border-right:none;} 
+.consoleMenu .active .indent {width:100%;}
+.consoleMenu .active .indent > span {height:30px;}
+.consoleMenu .consoles .body {min-height:136px;}
+.consoleMenu .consoles .foot {position:relative; font-weight:bold; overflow:visible;}		/* broken */
+#CenterMenu .consoles .foot a {line-height:18px; height:41px; padding:3px 14px 0; outline:none;}	/* to fix beta */
+#CenterMenu .active .arrow {background-position: -12px -68px;}                      /* beta 8 */
+#CenterMenu .active a:hover .arrow {background-position: -164px -68px;}             /* beta 8 */
+#CenterMenu .consoles .foot:hover a {color:#fff;}
+.consoleMenu .flyouts {clear:both; position:relative;}   /* use as anchor */
+.consoleMenu .flyouts .content {background:#F6F3ED; border:none; display:none; position:absolute; z-index:20; width:100%; top:10px; border-radius:7px; -moz-border-radius:7px;}
+.consoleMenu .flyouts .body {border:none;}
+.consoleMenu .flyout, .shadow {-moz-box-shadow: 3px 3px 2px #ccc, -3px 3px 2px #ccc; -webkit-box-shadow: 3px 3px 2px #ccc, -3px 3px 2px #ccc; box-shadow: 3px 3px 2px #ccc, -3px 3px 2px #ccc;}
+.consoleMenu .gradientPrimary.active  {
+    background: -moz-linear-gradient(top, #eeeae2 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeae2), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #eeeae2 0%,#ffffff 100%);
+	background: -o-linear-gradient(top, #eeeae2 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #eeeae2 0%,#ffffff 100%);
+	background: linear-gradient(top, #eeeae2 0%,#ffffff 100%);
+}
+.consoleMenu .foot a:hover {border-radius:0 0 6px 6px; -moz-border-radius:0 0 6px 6px;}
+.consoleMenu .foot.active:hover .indent > span {background-position: -46px -9px;}
+.consoleMenu ul, .consoleMenu ol {margin-left:15px;}
+.consoleMenu blockquote {margin:10px 5px;}
+.consoleMenu ul.divided {padding-left:0;}
+
+/* Move On */
+.moveOn {overflow: hidden !important;position: relative;}
+.moveOn .content {overflow: hidden;}
+
+.moveOn img {float: left;padding-right: 14px;}
+.moveOn .info {padding: 14px 14px 14px 0; margin-left: 190px;}
+.moveOn .headline {font-size: 20px;margin-bottom: 3px;/*margin-left:14px;*/ }
+.moveOn ul {/*margin-top: 10px;*/margin-top: 5px;padding: 0;list-style-type: none;margin-left: 14px;} 
+.moveOn .footer {background-color: #f9f9f6;border: solid 1px #dbd4c5;padding: 5px 14px;margin: 0px;height: 25px;line-height: 25px;clear: left;bottom: 0px;text-align: right;}
+.moveOn .footer a {padding-right: 10px;background: url('../../../images/posten/link_arrow_gray.png') right 6px no-repeat;}
+.module.moveOn ul.divided li + li {background:url("../../../images/posten/dividers/horizontal_295.png") no-repeat scroll center top transparent; }/*padding-top: 5px;*/
+.module.moveOn img.left {margin-bottom:0px}
+.module.moveOn .column { padding: 5px 0;width: 330px;}
+.module.moveOn .column:first-child { width: 185px;overflow: hidden;min-height:185px;height:100%}
+.module .list li + li { background: url('../../../images/posten/dividers/horizontal_295.png') center top no-repeat;}
+.module .list a.link { font-weight: normal;}
+.module.moveOn .foot {height:auto; min-height:14px;}
+.module.moveOn .column + .column {background:none; padding-top:14px;}
+
+/* Related Products */
+
+/* webmanual p.179 */
+.module.relatedProducts {padding-bottom:28px;}										/* bottom of image + wetfloor */
+.module.relatedProducts .content .body {height:auto; min-height:179px;}
+.relatedProducts .content .foot {overflow:visible; height:82px; margin-bottom:28px;} 	/* max image size */
+.relatedProducts .content .foot img {max-height:128px; margin:0 auto; display:block;} 	/* max image size */
+.relatedProducts .nth-1 .corner.bl, .module.relatedProducts .nth-2 .corner, .relatedProducts .nth-3 .corner.br {display:block;}
+
+/* webmanual p.165 */
+.module.relatedContent .head {height:40px;}         /* fix module_basic */
+.module.related {border-top: 2px solid #dbd4c5;} /* webmanual */
+.relatedContent .file { width: 24px; margin-right: 5px; }
+.relatedContent .column + .column {margin-left: 0px; padding-left: 10px; border-left: 1px solid #DBD4C5;}
+.module.relatedContent .column{padding-right: 0px;}
+
+.module.relatedProducts.podium .content .body ul li a {background: url('../../../images/posten/spritemap_localization_com_beta8.png') no-repeat scroll right 5px transparent;
+    color: #333333;
+    display: inline;
+    padding-right: 7px;}
+
+
+/* TabMenu */
+.tabMenu .body { border-radius: 0px !important; -moz-border-radius: 0px !important; border-bottom: 0px !important; border-left: 0px !important; border-right: 0px !important;}
+.tabMenu .content .corner {	display: none; }
+.tabMenu .extension { border-radius: 0px; -moz-border-radius: 0px; }
+.box.colspan-2 .tabMenu .extension.tabs > * { width: 110px  }
+.tabMenu .body > div {padding: 0;}         		/* fix modules_shared */
+.tabMenu .body {padding: 20px 0 0;}     			/* webmanual p.95 */
+.tabMenu .extension.tabs {margin-top:0;}           /* webmanual */
+.tabMenu .extension.tabs > div span, .tabMenu .extension.tabs > div {cursor: pointer;}
+
+#tabref1, #tabref2, #tabref3, #tabref4 {margin-bottom:20px;}
+
+/* bullet padding-left */
+.content-area ul,
+.module.product .content ul,
+.module.article .content ul,
+.module.callToAction .content ul,
+.module.campaign .content ul,
+.errbody ul,
+.ms-formfieldvaluecontainer ul,
+.ms-TPBody ul, .ms-WPBody ul, .ms-rtestate-write ul
+{
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+
+.content-area ol,
+.module.product .content ol,
+.module.article .content ol,
+.module.callToAction .content ol,
+.module.campaign .content ol,
+.module.moveOn .content ol,
+.errbody ol,
+.ms-formfieldvaluecontainer ol,
+.ms-TPBody ol, .ms-WPBody ol, .ms-rtestate-write ol
+{
+    padding-left: 26px;
+    margin-bottom: 10px;
+}
+
+
+/* campaign module */
+.module img.left {
+	float: left;
+	margin-right: 14px;
+	margin-bottom: -14px;
+}
+
+/* page heading */
+h1.headline,
+h3.headline { font-weight:normal; line-height:28px; margin:0; padding:18px 0 14px;}
+
+h1.headline > .ms-formfieldcontainer,
+h3.headline > .ms-formfieldcontainer { margin-left: 0;} 					/* remove margin cancellation */
+
+h1.headline, h1.headline input.ms-long,
+h3.headline, h3.headline input.ms-long {font-size:28px; line-height:28px; font-family:Calibri, 'CalibriLiteBold', Arial, sans-serif; height:auto;}		/* WYSIWYG edit */
+
+h1.headline input.ms-long,
+h3.headline input.ms-long {min-width:95%;}
+
+input.ms-long {min-width:70%;}
+.spacer {margin-top:10px;}
+
+/* page introduction */
+ .synopsis .ms-input {
+    color: #333;
+    font-family: Calibri, 'CalibriLiteItalic', Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic
+ }
+ 
+ .synopsis {
+    color: #333;
+    font-family: Calibri, 'CalibriLiteItalic', Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 20px;                                     /* webmanual p.92 */
+    clear: both;
+ }
+ 
+ .design-mode .synopsis {
+    margin-top: 0;
+ }
+ 
+ .welcome-content {margin:0;}			/* reset SP */
+ 
+ iframe.applicationFrame {border:1px solid #DBD4C5; padding:10px; -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px;}  /* webmanual p.135 */
+ iframe.applicationFrame {height:700px;}                /* CR */
+ .colspan-3 iframe.applicationFrame {width:526px;}
+ .colspan-4 iframe.applicationFrame {width:712px;}
+ .colspan-5 iframe.applicationFrame {width:898px;}
+ 
+ 
+/* #Global Menu */
+#GlobalMenu .dropDown .foot {
+    height: 70px;
+    padding: 7px 14px !important;
+}
+#GlobalMenu div .indent {
+    position: absolute !important;
+    z-index: 31 !important;
+}
+#GlobalMenu div .indent span {
+    background-position: -66px -145px !important;
+}
+
+.dropDown .close {
+	top: 0px !important;
+	background: url('../../../images/posten/spritemap_common_b7.png') -153px -40px no-repeat;
+}
+
+.indent span {background-position: -217px -40px;}
+
+.indent {
+    position: absolute;
+    margin: 0 auto;
+}
+
+#GlobalMenu .dropDown .body {
+    padding: 20px 14px;
+}
+
+.dropDownFocus.active .dropDown
+{
+    display: block;    
+}
+
+#LoginRetryButton
+{
+    margin-top: 15px;       
+}
+
+/* Temporary hide login on global menu till Access project is completed*/
+#GlobalMenu .content .loginNavigationItem
+{
+    display: none;
+}
+
+/*******************************************************************************************************************
+************************************************************************************ Call To Action ***************/
+.callToAction .body { height: 111px; }
+
+.callToAction A:link {
+    /*color: #194B96; */
+    text-decoration: underline;
+    display:inline; 
+    padding-right: 7px;
+    /*background: url("../../../images/posten/spritemap_common_beta8.png") no-repeat scroll right 5px transparent;*/
+}
+.callToAction .posten-rteElement-LINK A:link {
+    color: #333;	
+}
+
+.callToAction .posten-rteElement-LINK .posten-rteElement-H3 A:link {
+    color: #194B96; 
+    text-decoration:none; 
+    display:inline; 
+    padding-right: 7px;
+    background: url("../../../images/posten/spritemap_common_beta8.png") no-repeat scroll right 9px transparent;
+}
+
+.callToAction .posten-rteElement-LINK .ms-rteElement-H3 A:link {    
+    text-decoration:none; 
+    display:inline; 
+    padding-right: 7px;
+    background: url("../../../images/posten/spritemap_common_beta8.png") no-repeat scroll right 9px transparent;
+}
+
+.callToAction h5 {
+    font-size: 16px;
+}
+
+.callToAction .posten-rteElement-LINK .posten-rteElement-H3 A:link {    
+    text-decoration:none; 
+    display:inline; 
+    padding-right: 7px;
+    background: url("../../../images/posten/spritemap_common_beta8.png") no-repeat scroll right 8px transparent;
+}
+
+.callToAction .posten-rteElement-LINK .ms-rteElement-H3 A:link {        
+    display:inline; 
+    padding-right: 7px;
+    background: url("../../../images/posten/spritemap_common_beta8.png") no-repeat scroll right 8px transparent;
+}
+
+.callToAction .divImage img.left, 
+.moveOn .divImage img.left  {
+   margin-bottom: 0px;
+   margin-right: 0px;
+}
+
+.callToAction .divImage {
+   height: 100%;
+   width: 176px;
+   float: left;
+   overflow:hidden;
+   margin-right: 14px;
+}
+
+.callToAction .info {
+   margin-left: 190px;
+   padding: 14px 14px 14px 0px;
+}
+
+.callToAction .content .body {
+    height: 100%;
+}
+
+.callToAction .content .gradientPrimary
+{
+    background: none;
+}
+
+.callToAction.module .gradientPrimary
+{
+	background-color: #ffffff;  /*#eeeae2; */
+} 
+
+
+
+/* Campaign Spot */
+.campaign .litWrap {padding: 14px;}
+.campaign .litWrap p {margin: 0px;}
+.campaign .body .imgWrap { /*margin: -14px -14px 14px -14px;*/ display:block;}
+.campaign .foot {background-color:#F6F3ED; bottom:0; clear:left;}
+.campaign img.left {margin-bottom: 0px;margin-right: 0px;}
+.module.campaign .head h4, .module.campaign .head h5, .module.quickFinder .head.gradientPrimary h4 {color:#333;}
+.campaign .divImage {width: 176px;overflow:hidden;float: left;}
+.campaign .info {margin-left: 176px;}
+.campaign .imgWrap object {display:block;}
+
+/* Info Alert */
+
+.module.infoAlert .content .body .title h4 {
+    margin: 0px;
+}
+
+.module.infoAlert .content .body > * {
+    overflow: hidden;
+}
+
+.module.infoAlert .content .body .date {
+    width: auto;
+
+   
+}
+
+.colspan-3 > .infoAlert .theme {
+    width: 150px;
+    height: auto;
+    overflow: hidden;
+}
+
+.colspan-3 > .module.infoAlert .content .body .message > span {
+    width: 168px;
+}
+
+table.ms-SPZone .colspan-3 > .module.infoAlert .content .body .message > span {
+    width: 164px;
+}
+
+.colspan-4 > .infoAlert .theme {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.colspan-4 > .module.infoAlert .content .body .message > span {
+    width: 304px;
+}
+
+table.ms-SPZone .colspan-4 > .module.infoAlert .content .body .message > span {
+    width: 298px;
+}
+
+.colspan-5 > .infoAlert .theme {
+    width: 250px;
+    height: 37px;
+    overflow: hidden;
+}
+
+.colspan-5 > .module.infoAlert .content .body .message > span {
+    width: 440px;
+}
+
+/*.module.infoAlert .content .body .date .separator {
+     width: 52px;
+     background-image:url('../../images/posten/dividers/vertical_27.png') no-repeat scroll right 6px transparent;
+} */
+
+.module.infoAlert .content .body .date .separator {
+     border: none;
+}
+
+.module.infoAlert .content .body .message > span.expander {   
+    width: 0 !important;
+}
+
+.module.infoAlert .content .body .paginator { width: auto; }
+
+/* Arrows */
+.arrow.primary.medium.down {
+    background: url('../../../images/posten/spritemap_common_beta8.png') -90px -32px no-repeat;
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+}
+
+.arrow.primary.medium.up {
+    background: url('../../../images/posten/spritemap_common_beta8.png') -14px -32px no-repeat;
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+}
+
+
+/* News */
+
+.module.news .body a.link, 
+.module.news .body a.link:hover, 
+.module.news.archive .item a.link, 
+.module.news.archive .item a.link:hover {
+    background-position: right 4px;
+}
+
+.module.news .body table tr td a.link:hover { background-position: right 4px !important; }
+
+.news .body {
+    border: 1px solid #DBD4C5 !important;
+    min-height: 226px;
+    padding-top: 0px;
+    padding-bottom: 0px;    
+}
+
+.news.tabMenu .content .body{
+    border-radius: 0px 6px 0px 0px !important;
+    -moz-border-radius: 0px 6px 0px 0px !important;
+}
+
+.news table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+.news.archive .newsColumn {
+    width: 362px;
+}
+
+.news.archive .date {
+    color: #AFA28F;
+}
+
+.news.archive table th {
+    text-align: left;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    height: 44px;
+    padding: 0 14px;
+}
+
+.news.archive table td {
+    border: 2px solid #FFFFFF;
+    padding: 7px 14px;
+}
+
+.news.archive td > div + div {
+    padding-top: 7px;
+}
+
+.news.archive .noleftborder {    
+    border-left: 0px none;
+}
+
+.news.archive .norightborder {    
+    border-right: 0px none;
+}
+
+.news.archive th > a:link {
+    color: #333;
+}
+
+.news.archive th.borderRadiusTopLeft {
+    border-radius: 6px 0px 0px 0px;    
+    -moz-border-radius: 6px 0px 0px 0px;
+}
+
+.news.archive th.borderRadiusTopRight {
+    border-radius: 0px 6px 0px 0px;    
+    -moz-border-radius: 0px 6px 0px 0px;
+}
+
+.newspage {
+    position: relative;
+}
+
+.newspage .title.theme  {
+    float: left;
+    margin-left: 0px;
+    width: 350px;
+}
+
+.newspage #divTitle {
+    float: left;
+}
+
+.newspage #publistingDate {
+    padding: 24px 0 14px;
+    line-height: 28px;
+    text-align: right;
+}
+    
+.newspage .synopsis {
+    margin-bottom: 0px;
+}    
+
+.newspage .date {
+    font-size: 12px;
+    color: #AFA28F;      
+    padding: 7px 14px;
+}
+
+.newspage > div  {
+    padding: 7px 14px;
+    clear: left;
+}
+
+.module .content .paginator .pages > span > span, .module .extension.paginator .pages > span > span {
+    color: #998C6E;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+
+/* Customer Service */
+.module.podium.customerService .body > h4 {
+    margin: 0;
+}
+
+.module.podium.customerService .content.nth-1,
+.module.podium.customerService .content.nth-3 {
+	width: 171px;
+}
+
+.module.podium.customerService .content.nth-2 {      
+    width: 206px;
+}
+
+.module.podium.customerService .content.nth-2 .body{      
+    z-index: 4;
+}
+
+.module.podium.customerService .content.nth-1 > .head { border-right-width:0px; }
+.module.podium.customerService .content.nth-3 > .head { border-left-width:0px; }
+
+.module.podium.customerService .content .body ul li a.button { color: #FFFFFF; }
+
+.module.podium.customerService .content .alignright { text-align: right; }
+
+.module.podium.customerService .content .foot > div > div { max-height: 120px; max-width: 160px; overflow: hidden; position: relative; margin: 0 auto; top: 0;}
+
+.module.podium.customerService .content .body > ul ul {	padding-left: 15px; list-style: auto; }
+.module.podium.customerService .content .body > ul > li > ul {	padding-left: 15px; list-style: disc; }
+.module.podium.customerService .content .body > ul ol {	padding-left: 18px; }
+
+.module.podium.customerService .content .body ul li.divider  { padding: 0px 14px; }
+.module.podium.customerService .content .body ul li > p { margin:0px; }
+
+.module.podium.customerService ul #ms-rterangecursor-start, .module.podium.customerService ul #ms-rterangecursor-end { display: none !important; }
+
+
+/* Customer Service edit mode */
+table.ms-SPZone .module.podium.customerService .content.nth-1,
+table.ms-SPZone .module.podium.customerService .content.nth-3 {width: 169px;}
+
+
+/* Campaign Module */
+.module.mainCampaign.carousel .body p {padding: 5px 14px;}      /*08-27-2011 Post-RC1*/
+.module.mainCampaign > .content > .body {min-height:226px;}
+.bgImage {max-height:280px; overflow:hidden; -webkit-border-radius:6px; -moz-border-radius:6px; border-radius: 6px;}      /* webmanual p.157 */
+.campaign img.floatLeft, .campaign img.left { float:left; /*margin-right:14px; margin-bottom:-14px; max-height:111px;*/ }
+.module.mainCampaign.carousel .content .body .paginator {right:0; bottom:0; padding-right:10px; height:auto;}                    /* remove off position */
+.module.mainCampaign.carousel .content .body .paginator a {margin:6px 2px;}
+.textBox .ribbon.primary {border-bottom-left-radius:6px;}       /* Chrome */
+.textBox .ribbon.secondary {border-bottom-right-radius:6px;}    /* Chrome */
+@-moz-document url-prefix() {
+   .module.mainCampaign > .content > .body {min-height:226px;z-index:9000;}
+} /* firefox topbanner links clickable */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  .module.mainCampaign > .content > .body {min-height:226px;z-index:9000;}
+}/* chrome topbanner links clickable */
+
+
+/* Prefix/Sufix */
+.prefix,
+.suffix {
+	padding: 10px 14px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.prefix {
+	margin-bottom: 10px;
+}
+.suffix {
+	margin-top: 10px;
+}
+
+
+/* BEGIN OLD FRAMEWORK CODE */
+
+/************************************************************** Global Search with Auto Complete */
+.module.searchResult #CSR_NO_RESULTS li {border-top:none; padding:0 0 0 10px; margin:2px 0;}
+.module.searchResult #CSR_NO_RESULTS ul {margin:10px 0; list-style:disc inside;}
+.module.searchResult #CSR_NO_RESULTS h3 {margin-left:0;}
+
+.module.search {
+    margin-bottom:0;
+}
+.module.searchResult .form .input.text,
+.input.text {
+	display: block;
+	float: left;
+	position: relative;
+	background: url('../../../images/posten/textfield.png') 0px -25px no-repeat;	
+}
+.module.searchResult .form
+{
+    padding: 0 0 40px;
+}
+.input.text label {
+	position: absolute; 
+	top: 0px;
+	left: 0px; 
+	display: block;
+	color: #aaa;
+	padding: 4px 0 0 5px;
+	font-size: 14px;
+}
+/*.module.searchResult input[type='text'],*/
+.module.search input[type='text'] {
+	padding: 4px 0px;
+	margin-left: 5px;
+	border: none;
+	display: block;
+	float: left;
+	width: 147px;
+	height: 16px;
+	vertical-align: top;
+	background: transparent url('../../../images/posten/textfield.png') repeat-x;
+	line-height: 0;
+	border-radius: 0;
+}
+.module.search span div {
+	width: 5px;
+	height: 24px;
+	float: left;
+	background: url('../../../images/posten/textfield.png') -6px -25px no-repeat;
+}
+
+.search button.search {
+	position: absolute;
+	right: 0px;
+	float: right;
+}
+
+.module.searchResult .extension.form .search,
+button.search {
+	cursor: pointer;
+	border: none;
+	color: #e00;
+	width: 24px;
+	height: 24px;
+	background-position: -97px 0;
+	position:absolute;
+}
+.module.searchResult .extension.form .search:hover,
+button.search:hover {
+	background-position: -97px -25px;
+}
+.head .close {
+	float: right;
+	width: 17px;
+	height: 16px;
+	margin: 15px 5px;
+	cursor: pointer;
+	background: url('../../../images/posten/spritemap_common.png') -153px -49px no-repeat;
+}
+
+.theme a.theme {
+	text-decoration: underline;
+}
+
+p + p {
+	margin-top: 7px;
+}
+/* END OLD FRAMEWORK CODE */
+
+
+/* Quick Finder */
+.module.quickFinder a.link {color:#333;}          /* override branding */
+.module.quickFinder .content .body {border-left:none; border-right:none;}
+.module.quickFinder li.menu + li {border-left:1px solid #DBD4C5; border-right:1px solid #DBD4C5;}
+.module.quickFinder .tracker textarea {width:140px; padding:1px 2px; height:20px; overflow: auto;}
+.module.quickFinder ul {padding-left:0; margin-bottom:0;}
+
+.quickFinder .body input[type='text'], .quickFinder .body select {width:139px;}
+.quickFinder {width: 176px;}
+
+.quickFinder .buttonwrap {
+    position: relative;
+    padding-top: 3px;
+    padding-bottom: 3px;    
+}
+
+.quickFinder input.button {
+    font-size: 14px;
+    font-family: Calibri, 'CalibriLite', Arial, sans-serif;
+	display: inline-block;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	border: none;	
+	padding: 3px 14px;
+	color: #fff !important;	
+}
+
+.quickFinder .PWP-inputWrapper.button > input {
+    font-family: Calibri, 'CalibriLite', Arial, sans-serif;
+    font-size: 14px;
+    height:20px;
+    line-height:22px;
+/*    behavior: url('/_layouts/posten/Scripts/PIE.htc'); */
+    border-radius: 4px;
+}
+
+/* Article */
+.article .quote .source {
+	font-style: normal;
+	display: inline-block;
+	margin-top: 5px;
+	border-top: 2px solid #dbd4c5;
+}
+.article .quote .footer {
+	font-style: normal;
+	height: 20px;
+	margin-top: 5px;
+	border-top: 2px solid #dbd4c5;
+}
+.article p { overflow: hidden; }
+.article .headline { font-size: 18px; }
+.article .quote .headline { font-size: 16px; }
+
+
+/* Web Assistant */
+
+.webAssistant #webAssResultsPanel { padding-top:15px; padding-bottom:15px; } /* Not 20px bec. li already has 5px padding */
+
+.webAssistant .body li a.link,
+.module.webAssistant > .content .body .theme a.link {
+	color: #333333;
+	text-decoration: underline;
+}
+
+.webAssistant a.button, 
+.webAssistant a.button:hover, 
+.ms-WPBody .webAssistant a.button:hover {
+    text-decoration:none; 
+    color: #FFFFFF; 
+    font-size: 14px !important;
+}
+
+.webAssistant .content .body,
+.webAssistant .content .body a:link {
+    font-family: Calibri, 'CalibriLite', Arial, sans-serif;
+    font-size: 12px;
+} 
+    
+.webAssistanceSearchBox {
+    position: relative;
+}
+ 
+.webAssistanceLabel {
+    position: absolute;
+    padding: 2px 4px;
+    color: #AAA;
+    font-size: 14px;
+    top: 87px;
+}
+
+.webAssistanceInput {
+    border: 1px solid #dbd4c5;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    padding: 2px 4px;
+    width: 139px;
+    height: 18px;    
+}
+
+
+.module.webAssistant > .content > .head .portrait {
+    bottom: 0;
+    height: 118px;
+    position: absolute;
+    right: 0;
+    width: 163px;
+}
+
+.module.webAssistant .content.active > .bl,
+.module.webAssistant .content.active > .br {
+   display: none;
+}
+
+
+#webAssResult.active > .bl,
+#webAssResult.active > .br {
+  display: block;  
+}
+ 
+#webAssResult {
+    display: none;
+    position: absolute !important;
+    z-index: 30;
+    font-size: 12px;
+    line-height: 14px;
+    background-color: White;
+    width: 100%;
+}
+
+.module.webAssistant > .content p {
+    padding: 5px 14px;
+}
+
+.module.webAssistant > .content .webAssistantResult .body .divided p {
+    padding: 5px 0px;    
+}
+c
+.module.webAssistant .footcolumn a.link { background-position: right 4px; }                                                                         
+
+/*Web Assistant Search Results - SE*/
+/*change #000000 to #333: following the color on the HTML design */
+#webAssResults .theme p { color:#333; } /*Du Skrev*/
+#webAssResults p { color:#333; /*font-weight:bold;*/ } /*remove bold formatting - Ref: PROD00049769 */
+#webAssResults p a { color:#333; text-decoration:underline; font-weight:normal; }
+#webAssResults a { text-decoration:underline; }
+#webAssResults .noresults { color:#333; padding:0px 0px; font-weight:normal; } /*Ingen resultater fundet! - text*/
+
+
+/* Fly Out */
+
+#divRootWebAsstFlyout .head.dropDownFocus {	height: 180px; }
+
+#divRootWebAsstFlyout .head h4 {	
+	margin-top: 5px;
+	padding-right: 14px;
+}
+
+.webAssistant .head .portrait {
+	height: 119px;
+	position: absolute;
+	right: 0px;
+	width: 100%;
+	bottom: 0px;
+	text-align: right;
+	overflow: hidden;
+}
+
+.webAssistant .dropDown {
+    z-index: 99999 !important;	
+	width: 734px !important;	
+}
+
+.webAssistant .dropShadow {
+	width: 734px;
+	height: 98%;
+}
+#divRootWebAsstFlyout .indent span {background-image: none;}
+
+#divRootWebAsstFlyout .body {
+	text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+#divRootWebAsstFlyout .body .column {
+	width: 29%;
+    float: left;            
+    overflow: hidden;
+    padding-left: 14px;
+    margin-right: 14px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;    
+}
+
+#divRootWebAsstFlyout .body .column + .column { background: url('../../../images/posten/dividers/vertical_87.png') no-repeat scroll left center transparent; }
+
+/* for contents which use custom styles with fixed width (e.g., Quote) */
+#divRootWebAsstFlyout .body .column span { width: 100%; }
+
+#divRootWebAsstFlyout .dropDown .foot .footcolumn {
+	height: 30px;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    margin-right: 14px;
+    padding-left: 14px;
+}
+
+#divRootWebAsstFlyout .foot .footcolumn + .footcolumn { background: url('../../../images/posten/dividers/vertical_27.png') no-repeat scroll left center transparent; }
+
+#divRootWebAsstFlyout .foot {padding-left: 0px !important; padding-right: 0px !important; border-top: 0px !important;}
+
+/* because the gradientPrimary is cancelled by .dropDown .content .foot */
+#divRootWebAsstFlyout .gradientPrimary 
+{
+    background: -moz-linear-gradient(center top , #ffffff 0%, #EEEAE2 100%) repeat scroll 0 0 transparent !important;
+    border-bottom: 1px solid #DBD4C5;
+}
+
+
+/* Search Result */
+.srch-WPBody {
+     color: #333;
+    font-family: Calibri, 'CalibriLite', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.srch-stats {
+    background: none !important;
+    color: #003382;
+    font-family: Calibri, 'CalibriLite', Arial, sans-serif;
+    margin-left: 14px; 
+    white-space: normal !important;
+}
+
+.searchResult h5 {
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0;
+	padding: 3px 14px;
+}
+
+.module.searchResult .extension.form a {
+    vertical-align: bottom;
+    float: right;
+    padding: 3px;
+}
+
+.module.searchResult .srch-results 
+{
+    padding-left: 0px;
+}
+
+.module.searchResult .body.result p
+{
+    margin: 0px;
+}
+
+.module.searchResult input[type='text'] {
+	padding: 4px 0px;
+	margin-left: 5px;
+	border: none;
+	display: block;
+	float: left;
+	height: 16px;
+	vertical-align: top;
+	background: transparent url('../../../images/posten/textfield.png') repeat-x;
+	/*line-height: 0;*/
+	border-radius: 0;
+}
+
+.module.searchResult .extension.paginator .srch-Page 
+{
+    padding: 0;
+}
+
+.module.searchResult .extension.form input[type="text"] 
+{
+    width: 250px;
+}
+
+.module.searchResult .extension.info,
+.module.searchResult .content 
+{
+    display: inline-block;
+    width: 100%;
+}
+
+/* from error_module.css */
+.generror { width: 548px; height: auto; }
+.generror .headtitle { padding-left: 10px; padding-bottom: 4px; }
+.generror .headtitle .theme { margin-top: 0px; }
+.generror .subheadline { font-size: 16px; padding-left: 10px; }
+.generror .categoryheadline { padding-left: 10px; padding-bottom: 15px; }
+.generror .categoryheadline .theme { margin-top: 15px; }
+.generror .categoryheadline ul { margin-left: 15px; padding-left: 0px; }
+.generror .categoryheadline ul li { margin-top: 15px; }
+.generror .categoryheadline div { margin: 15px 0; }
+
+.module.error .content li {margin:9px 0 9px 15px;}
+.module.error .content .body {border:none;}
+.module.error .content .body p:last-child {font-weight:bold;margin-left:15px;}
+
+
+/************ TopBanner 08262011****************************/
+.topBannerEditorItemPanel div {padding-top: 8px;}
+.topBannerEditorItemPanel input[type='button'] {width: 100px; display:block;}
+.topBannerEditorItemPanel input[type='text'] {width: 160px;}
+.topBannerEditorItemPanel input[type='checkbox'] {margin-left:0;}
+
+.module.mainCampaign.carousel .content .body ul li {position:static; height:226px;}
+.module.mainCampaign.carousel .content a.link.hidden { display: none;}
+.module.mainCampaign.carousel .content .body ul { width:auto;}
+.module.mainCampaign.carousel .content .body ul li > DIV.bgImage > IMG.hidden { display: none; }
+.module.mainCampaign.carousel .content .body ul li > DIV.bgImage > IMG.visible { display: block; }
+.module.mainCampaign.carousel .content .body .textBox.right .indent {
+    background: url("../../../images/posten/spritemap_common_beta8.png") no-repeat scroll 0px -144px transparent;
+    display: block;
+    height: 24px;
+    margin-top: -15px;
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    width: 12px;
+    z-index: 1;
+}
+
+.module.mainCampaign.carousel .content .body p.alignRight a.link { 
+  background: url('../../../images/posten/arrow_right_common.png') right 5px no-repeat;  
+}
+
+.module.mainCampaign li {
+    display: none;
+}
+
+.module.mainCampaign li:first-child {
+    display: list-item;
+}
+
+/* webmanual p.154 */
+.paginator a.button.circle.active {
+    color:#fff; 
+    background-color:transparent; 
+    background-position:-25px -20px;
+}
+
+.paginator a.button.circle {
+  height:20px; width: 20px; color:#000; line-height:20px; 
+  background: url("../../../images/posten/spritemap_common.png") no-repeat -95px -49px;
+  background: -moz-linear-gradient(top, #e0e0e0 0%, #999 100%);
+  background: -webkit-linear-gradient(top, #e0e0e0 0%, #999 100%);
+  background: -o-linear-gradient(top, #e0e0e0 0%, #999 100%);
+  background: -ms-linear-gradient(top, #e0e0e0 0%, #999 100%);
+  background: linear-gradient(top, #e0e0e0 0%, #999 100%);
+}
+
+.single.imgWrap img {display:block;}
+
+
+/* ? */
+#Frame {overflow:hidden;}
+.contentlink {font-size:13px; height:45px; overflow:hidden}
+
+/*================================*/
+
+
+/* Hypercare#166747 */
+/* CMS ICE */
+.module.relatedContent .body li > a,
+.module.relatedContent .body li > .posten-rteStyle-pdfLarge a,
+.module.relatedContent .body li > .posten-rteStyle-pdfSmall a,
+.module.relatedContent .body li > .posten-rteStyle-excelSmall a,
+.module.relatedContent .body li > .posten-rteStyle-excelLarge a,
+.module.relatedContent .body li > .posten-rteStyle-wordSmall a,
+.module.relatedContent .body li > .posten-rteStyle-wordLarge a {
+	background-image: url("../../../images/posten/spritemap_common_beta8.png");
+	background-position: right 6px;
+	background-repeat: no-repeat;
+	display: inline;		
+	clear: left;
+	padding-right:6px;
+}
+
+.module.relatedContent .body li > .posten-rteStyle-newwindow a { 
+	background-image: url(/_layouts/images/posten/icons/New_Window_link.png);
+	background-position: right top;
+	background-repeat: no-repeat;
+	display: inline;
+	padding-right: 14px;
+  }
+  
+  
+.module.relatedContent .body li > .posten-rteStyle-externallink a { 
+    background-image: url(/_layouts/images/posten/icons/external_link.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding-right: 14px;
+}
+ 
+/*.module.relatedContent .body li > a {
+	background-image: none;
+}*/
+
+/*=====Begin: Infopath form====*/
+
+div.infopForm .gradientTheme { position:relative; text-align:center; vertical-align:middle; border-radius: 4px; margin: 5px 0px 0px 0px; }
+div.infopForm input[type="button"] { border:none; background-color:transparent; font-size:14px; padding: 3px 14px; color: #FFFFFF !important; margin: 1px 0px 1px 0px; width: auto; cursor: pointer; }
+div.infopForm textarea
+{
+    border: solid 1px #ccc; min-height:72px; margin-top:5px; padding: 5px 0px 0px 5px;
+    background-color:#fff;
+}
+
+div.infopForm .ui-infopath-header { background-color: #F6F3ED; padding-left: 14px; height: 30px; border-collapse: collapse; 
+                                      border-radius: 4px 4px 4px 4px; position: relative; margin-bottom:5px; } 
+
+div.infopForm .ui-infopath-header H2 { font-size: 16px; color: #333; font-weight: bold; padding-top:1px; }
+
+.infoperror {width: 420px; margin-left:32px; background-color: Red; padding: 5px 5px 5px 14px; border-radius:5px; color:White; }
+.infoperroroverh2 {margin-bottom: 15px; background-color: Red; padding: 5px 5px 5px 14px; border-radius:5px; color:White;}
+
+.infoperrormessage {color:red;}
+
+/*div.infopForm tr td div {padding-left: 14px;}*/
+
+/*=====End: Infopath form====*/
+
+
+/*CMS-ICE*/
+.module.callToAction h2 {
+    font-size: 22pt; 
+    line-height: 1; 
+    margin-top: 0px; 
+}
+
+.callToAction .info {
+    padding: 8px;
+}
+
+.module.callToAction h3 {
+    margin-top: 0px; 
+    line-height: 1; 
+}
+
+div.ms-rtestate-field a,  
+div.ms-rtestate-field a:link,  
+div.ms-rtestate-field a:visited, 
+div.ms-rtestate-field a:hover 
+{
+    text-decoration:underline;
+}
+
+div.ms-rtestate-field a[class='posten-rteElement-ctasb'],
+div.ms-rtestate-field a[class='posten-rteElement-ctasb']:link,
+div.ms-rtestate-field a[class='posten-rteElement-ctasb']:visited,
+div.ms-rtestate-field a[class='posten-rteElement-ctasb']:hover,
+div.ms-rtestate-field a[class='posten-rteElement-ctalb'], 
+div.ms-rtestate-field a[class='posten-rteElement-ctalb']:link, 
+div.ms-rtestate-field a[class='posten-rteElement-ctalb']:visited,
+div.ms-rtestate-field a[class='posten-rteElement-ctalb']:hover
+{
+	text-decoration: none;
+}

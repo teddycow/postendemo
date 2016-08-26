@@ -1,0 +1,180 @@
+/***** Colors *****/
+
+a:link, a:visited, .ms-WPBody a:link, .ms-WPBody a:visited,
+.searchResult a:link, .searchResult a:visited,
+#webAssResults p a:hover,
+.li, #webAssResults {
+	color: #003382;
+}
+
+a:hover, .link:hover, .ms-WPBody a:hover, .ms-WPBody .posten-rteElement-LINK a:hover, .ms-WPBody .ms-rteElement-LINK a:hover,
+.module .foot a:hover, #Foot a:hover, #Foot .box h4 a:hover, #Foot .more a:hover, div#Caption a:hover,
+.headline, .headline input.ms-long,
+.treeView a:hover, .treeView .selected > a, .treeView .active > a,
+.module.tabMenu .extension.tabs a:hover span, .module.tabMenu .extension.tabs .active a span, h1, h2, h3, h4 {
+	color: #031f50;
+}
+
+a[class='posten-rteElement-ctasb']:link , a[class='posten-rteElement-ctasb']:visited, a[class='posten-rteElement-ctasb']:hover,
+a[class='posten-rteElement-ctalb']:link , a[class='posten-rteElement-ctalb']:visited, a[class='posten-rteElement-ctalb']:hover {
+	color: #fff; 	
+}
+
+.faq.module .active .question .a, .faq.module li:hover .question .a {
+    color: #031f50 !important; /* because it's a div */
+}
+
+
+#GlobalMenu .dropDownFocus > a:hover,
+.theme,
+.active > a,
+.tabMenu .prefix.tabs .active span,
+a:hover.
+.ms-WPBody .divided a:hover {
+	color: #003382;
+}
+
+#QuickFinder .menu.active {
+	background: #031f50;
+}
+
+.localizationRibbon {
+	background-color: #c00;
+}
+
+.localizationRibbon.secondary {
+	background-color: #f0cc00;
+}
+
+
+/***** Spritemaps *****/
+
+
+a.link.theme > .arrow,
+a.link:hover > .arrow,
+button.search,
+.arrow.theme,
+li.expanded > a .arrow.null-theme,
+a:hover .arrow.null-theme,
+.bundleOffer .pageButton span,
+.dropDown .top .left,
+.dropDown .top .right,
+.gradient.theme .arrow,
+.search input,
+#GlobalMenu .dropDown .top > *,
+#GlobalMenu a.home:hover span,
+#QuickFinder .menu,
+.module.searchResult .extension.form .search,
+.paginator a.button.circle.active {
+	background-image: url('../../images/posten/spritemap_localization_com.png');
+}
+
+button.search, .search input {
+	background-position: -97px 0px;
+}
+
+.search input {
+	cursor:pointer;
+	width: 24px;
+	height: 24px;
+	border: none;
+	line-height:3000;
+}
+
+#GlobalMenu a.home:hover span {
+	background-position: -0px -73px;
+}
+
+.logo {
+	width: 185px;
+	height: 21px;
+	background-position: 0 -148px; /* beta7 */
+}
+
+.logo, 
+.consoleMenu .foot.active:hover .indent > span, 
+.treeView li li a > span, .treeView .goBack > span,
+.faq .decoration {
+    background-image: url('../../images/posten/spritemap_localization_com_b7.png');
+    background-repeat: no-repeat;
+}
+
+#QuickFinder .menu {
+	background-position: 0 center;
+	background-repeat: repeat-x;
+}
+
+.bundleOffer .pageButton.next div {
+	background-position: -78px -0px;
+	background-repeat: no-repeat;
+}
+
+
+/* For IE */
+.module.mainCampaign .textBox .foot {
+    background-image: url('../../images/posten/spritemap_localization_com_b8.png');
+    background-repeat: no-repeat;
+}
+.module.mainCampaign .textBox .foot {
+    background-position:0 -100px;
+}
+
+
+/* Gradients */
+.gradientTheme, #MainMenu li a:hover, #MainMenu li.selected a, .consoleMenu .console .foot a:hover
+{
+    background: url("../../images/posten/spritemap_localization_com.png") 0 -136px repeat-x; /* beta6 */ /* fallback IE 7-8 */
+    
+    color:#fff;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#003381), to(#032153));
+    background: -moz-linear-gradient(100% 100% 90deg, #032153, #003381);
+    background: -webkit-linear-gradient(#003381, #032153);
+    background: -o-linear-gradient(#032153, #003381);
+} 
+
+/***** Backgrounds *****/
+.gradientTheme:hover h2,
+a.button,
+#QuickFinder input.button {
+	background: #003382;
+	background: -moz-linear-gradient(top, #003382 0%, #031f50 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#003382), color-stop(100%,#031f50));
+	background: -webkit-linear-gradient(top, #003382 0%,#031f50 100%);
+	background: -o-linear-gradient(top, #003382 0%,#031f50 100%);
+	background: -ms-linear-gradient(top, #003382 0%,#031f50 100%);
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003382', endColorstr='#031f50',GradientType=0 );*/
+	background: linear-gradient(top, #003382 0%,#031f50 100%);
+}
+
+a.button:hover,
+#QuickFinder input.button:hover {
+	background: #031f50;
+}
+
+#MainMenu .selected .additional-background {background: url(../../images/posten/mainmenu_active_indent_no.png) no-repeat center bottom;}
+
+#Foot .box:first-child {width:165px;} /* TODO: Get smalller logo from designer */
+
+/*** Correct Link Arrow ***/
+#webAssResults a.link:hover, .posten-rteElement-LINK a:hover, .ms-rteElement-LINK a:hover,
+.module.mainCampaign.carousel .content .body p.alignRight a.link:hover { 
+  background: url('../../images/posten/arrow_right_com.png') right 5px no-repeat;
+}
+
+/***** IE fixes *****/
+.ie7 .quickFinder .PWP-inputWrapper.button > input {
+      background: url('../../images/posten/quick_finder/button_rounded_com.png') no-repeat;
+      width: 69px;
+      height: 23px; 
+}
+.ie7 .quickFinder .PWP-inputWrapper.button > input:hover {
+      background: url('../../images/posten/quick_finder/button_rounded_hover_com.png') no-repeat;
+}
+.ie8 .quickFinder .PWP-inputWrapper.button > input {
+      background: url('../../images/posten/quick_finder/button_rounded_com.png') no-repeat;
+      width: 69px;
+      height: 23px; 
+}
+.ie8 .quickFinder .PWP-inputWrapper.button > input:hover {
+      background: url('../../images/posten/quick_finder/button_rounded_hover_com.png') no-repeat;
+}

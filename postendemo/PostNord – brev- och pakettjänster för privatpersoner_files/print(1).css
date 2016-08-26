@@ -1,0 +1,13 @@
+body, .localizationRibbon, #Body .mid {
+	background: none !important;
+}
+
+#Head, #Foot, #SubMenu, #Body .top, #Body .bot,
+#MainMenu, #QuickFinder, #InfoAlert, .consoleMenu,
+.relatedProducts, .bundleOffer, .callToAction {
+	display: none !important;
+}
+
+#Body {
+	top: 0px !important;
+}

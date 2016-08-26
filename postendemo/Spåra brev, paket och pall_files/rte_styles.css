@@ -1,0 +1,458 @@
+﻿H1.ms-rteElement-H1
+{
+-ms-name:"Heading 1";
+}
+.ms-rteElement-H1
+{
+}
+H2.ms-rteElement-H2
+{
+-ms-name:"Heading 2";
+}
+.ms-rteElement-H2
+{
+}
+H3.ms-rteElement-H3
+{
+-ms-name:"Heading 3";
+}
+.ms-rteElement-H3
+{
+}
+H4.ms-rteElement-H4
+{
+-ms-name:"Heading 4";
+}
+.ms-rteElement-H4
+{
+}
+
+div.ms-rteElement-LINK { -ms-name: "Link with Arrow"; }
+.ms-rteElement-LINK { }
+
+span.ms-rteElement-divider {
+    -ms-name: "Divider";
+}
+.ms-rteElement-divider {
+    background: url("../../_layouts/images/postnordcommon/dividers/horizontal_160.png") no-repeat scroll center top transparent;
+    padding-top: 10px;
+    margin-top: 10px;
+	display: inline-block;
+	width: 100%;
+}
+
+span.ms-rteElement-PullQuote {
+    -ms-name:"Quote";
+}
+.ms-rteElement-PullQuote {
+    background: url(/_layouts/images/postnordcommon/open_quote.png) top left no-repeat;
+	float: right;
+	font-size: 24px;
+	text-indent: 50px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px; 
+	padding-bottom: 0px; 
+	font-style: italic;
+	color: #003482;
+	font-weight: bold;	
+	width:250px;
+	line-height: 29px;
+}
+
+span.ms-rteElement-PullQuoteAttribution {
+    -ms-name:"Quote Attribution";
+}
+.ms-rteElement-PullQuoteAttribution {
+    color: #003482;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;    
+    text-indent: 0px;    
+    width:250px;
+    clear:both;
+    float:right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.ms-rteElement-PullQuote Hr {
+    background-color: #DBD4C5;
+    color: #DBD4C5;
+    border: none;
+    float: left;
+    height: 2px;
+    margin-top:10px;
+    margin-bottom: 0px;
+    margin-right: 15%;
+    width: 85%;
+    display:block;
+}
+
+.ms-rteElement-PullQuoteAttribution Hr {
+    background-color: #DBD4C5;
+    color: #DBD4C5;
+    border: none;
+    float: left;
+    height: 2px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-right: 15%;
+    width: 85%;
+    display:block;
+}
+
+HR.ms-rteElement-Hr{
+-ms-name:"Horizontal Rule";
+}
+.ms-rteElement-Hr
+{
+}
+
+span.ms-rteElement-Infobox {
+    -ms-name:"Info Box";
+}
+.ms-rteElement-Infobox {
+    background-color: #f6f3ee;
+    border: 1px solid #EAEAEA;
+    padding: 10px;
+    float: left;
+    margin-right: 5px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    behavior: url(../_layouts/postnordcommon/Scripts/PIE.htc);
+}
+
+span.ms-rteElement-maincopy {
+    -ms-name:"Body";
+}
+
+.ms-rteElement-maincopy {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    font-family:Calibri,Arial,Sans-Serif;
+}
+
+h1.posten-rteElement-H1 { -ms-name: "Heading 1"; }
+.posten-rteElement-H1 { }
+
+
+h2.posten-rteElement-H2 { -ms-name: "Heading 2"; }
+.posten-rteElement-H2 { }
+
+
+h3.posten-rteElement-H3 { -ms-name: "Heading 3"; }
+.posten-rteElement-H3 { }
+
+
+h4.posten-rteElement-H4 { -ms-name: "Heading 4"; }
+.posten-rteElement-H4 { }
+
+h2.posten-rteElement-ctah2 { 
+	-ms-name: "Call To Action Heading 2"; 
+    font-size: 22pt;
+    font-weight: bold;
+    font-family: Calibri,Arial,Sans-Serif;
+}
+
+h3.posten-rteElement-ctah3 { 
+	-ms-name: "Call To Action Heading 3"; 
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: Calibri,Arial,Sans-Serif;
+}
+
+a.posten-rteElement-ctasb {
+	-ms-name: "Call To Action Small Button"; 
+	font-size: 16pt;
+}
+
+a.posten-rteElement-ctalb {
+	-ms-name: "Call To Action Large Button"; 
+	font-size:18pt;
+}
+
+table.posten-rteTable-CountryStyle {
+	-ms-name: "Country Specific Table";
+}
+
+table.posten-rteTable-Neutral
+{
+	-ms-name: "Neutral Table";
+}
+
+table.posten-rteTable-White
+{
+	-ms-name: "White with with no graphics Table";
+}
+
+
+div.posten-rteElement-LINK { -ms-name: "Link with Arrow"; }
+.posten-rteElement-LINK { }
+
+DIV.posten-rteElement-divider {
+    -ms-name: "Divider";
+}
+
+.posten-rteElement-divider {
+    background: url("../../_layouts/images/postnordcommon/dividers/horizontal_160.png") no-repeat scroll center top transparent;
+    margin: 5px 0px;
+    padding: 0;
+	display: inline-block;
+	width: 100%;
+	height: 2px;
+	border: none;
+}
+
+span.posten-rteElement-PullQuote {
+    -ms-name:"Quote";
+}
+.posten-rteElement-PullQuote {
+    background: url(/_layouts/images/postnordcommon/open_quote.png) top left no-repeat;
+	float: right;
+	font-size: 24px;
+	text-indent: 50px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px; 
+	padding-bottom: 0px; 
+	font-style: italic;
+	color: #003482;
+	font-weight: bold;	
+	width:250px;
+	line-height: 29px;
+}
+
+span.posten-rteElement-PullQuoteAttribution {
+    -ms-name:"Quote Attribution";
+}
+.posten-rteElement-PullQuoteAttribution {
+    /*color: #003482;*/
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;    
+    text-indent: 0px;    
+    width:250px;
+    clear:both;
+    float:right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.posten-rteElement-PullQuote Hr {
+    background-color: #DBD4C5;
+    color: #DBD4C5;
+    border: none;
+    float: left;
+    height: 2px;
+    margin-top:10px;
+    margin-bottom: 0px;
+    margin-right: 15%;
+    width: 85%;
+    display:block;
+}
+
+.posten-rteElement-PullQuoteAttribution Hr {
+    background-color: #DBD4C5;
+    color: #DBD4C5;
+    border: none;
+    float: left;
+    height: 2px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-right: 15%;
+    width: 85%;
+    display:block;
+}
+
+span.posten-rteElement-Infobox {
+    -ms-name:"Info Box";
+}
+.posten-rteElement-Infobox {
+    background-color: #f6f3ee;
+    border: 1px solid #EAEAEA;
+    padding: 10px;
+    float: left;
+    margin-right: 5px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    behavior: url(../_layouts/postnordcommon/Scripts/PIE.htc);
+}
+
+blockquote {
+  padding: 10px 0;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+span.posten-rteElement-maincopy {
+    -ms-name:"Body";
+}
+
+.posten-rteElement-maincopy {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    font-family:Calibri,Arial,Sans-Serif;
+}
+
+.ms-cui-tt-span {
+    padding-top: 4px;
+    padding-right: 15px;
+    padding-bottom: 4px;
+    padding-left: 15px;
+}
+
+.ms-cui-tts-scale-2 .ms-cui-tt-a {
+  width:auto;
+  color: #FFFFFF;
+}
+
+.posten-rteStyle-pdfSmall
+{ 
+    -ms-name: "PDF Link - Small Icon";
+}
+
+.posten-rteStyle-pdfSmall
+{ 
+    background: url(/_layouts/images/postnordcommon/icons/pdficon_small.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	min-height: 17px;
+}
+
+.posten-rteStyle-pdfLarge
+{ 
+    -ms-name: "PDF Link - Large Icon";
+}
+
+.posten-rteStyle-pdfLarge
+{ 
+    background: url(/_layouts/images/postnordcommon/icons/PN_icon_PDF.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	min-height: 26px;
+}
+
+.posten-rteStyle-excelSmall
+{ 
+    -ms-name: "Excel Link - Small Icon"; 
+}
+    
+.posten-rteStyle-excelSmall
+{ 
+    background-image: url(/_layouts/images/icxlsx.png);
+	background-position:  left top;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	min-height: 16px;
+}
+
+.posten-rteStyle-excelLarge 
+{ 
+    -ms-name: "Excel Link - Large Icon"; 
+}  
+
+.posten-rteStyle-excelLarge 
+{ 
+    background-image: url(/_layouts/images/postnordcommon/icons/PN_icon_excel.png);
+	background-position:  left top;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	min-height: 26px;
+}
+
+.posten-rteStyle-wordSmall
+{ 
+    -ms-name: "Word Link - Small Icon";
+}
+
+.posten-rteStyle-wordSmall
+{ 
+    background-image: url(/_layouts/images/icdocx.png);
+	background-position: left top;
+	background-repeat: no-repeat; 
+	padding-left: 20px;
+    min-height: 16px;
+}
+
+.posten-rteStyle-wordLarge 
+{ 
+    -ms-name: "Word Link - Large Icon";
+}
+  
+.posten-rteStyle-wordLarge 
+{ 
+    background-image: url(/_layouts/images/postnordcommon/icons/PN_icon_word.png);
+	background-position: left top;
+	background-repeat: no-repeat; 
+	padding-left: 30px;
+    min-height: 26px;
+}
+
+.posten-rteStyle-pdfLarge,
+.posten-rteStyle-pdfSmall,
+.posten-rteStyle-excelSmall,
+.posten-rteStyle-excelLarge,
+.posten-rteStyle-wordSmall,
+.posten-rteStyle-wordLarge
+{ 
+    display:inline-block;
+	padding-right: 6px;
+ }
+  
+  
+   .posten-rteStyle-externallink 
+  { 
+    -ms-name: "External Link";
+ }
+ 
+ .posten-rteStyle-newwindow 
+  { 
+    -ms-name: "Open in New Window link"; 
+  } 
+  
+  .posten-rteStyle-newwindow 
+  { 
+    background-image: url(/_layouts/images/postnordcommon/icons/New_Window_link.png);
+  } 
+  
+  .posten-rteStyle-externallink 
+  { 
+    background-image: url(/_layouts/images/postnordcommon/icons/external_link.png);
+  }
+
+.posten-rteStyle-newwindow,
+.posten-rteStyle-externallink 
+  { 
+	background-position: right top;
+	background-repeat: no-repeat;
+	display:inline-block;
+	padding-right: 14px;
+  } 
+  
+  .posten-externallink-noimage, 
+  .posten-newwindow-noimage    
+  { 
+    background-image: none;
+  } 
+   
+   /*These enormous selectors are required in order to avoid blank entries in RTE styles dropdown*/
+    a [class='posten-rteStyle-pdfLarge'], [class='posten-rteStyle-pdfLarge'] a, [class='posten-rteStyle-pdfLarge'] a:link, [class='posten-rteStyle-pdfLarge'] a:visited, [class='posten-rteStyle-pdfLarge'] a:hover,
+	a [class='posten-rteStyle-pdfSmall'], [class='posten-rteStyle-pdfSmall'] a, [class='posten-rteStyle-pdfSmall'] a:link, [class='posten-rteStyle-pdfSmall'] a:visited, [class='posten-rteStyle-pdfSmall'] a:hover,
+	a [class='posten-rteStyle-excelSmall'], [class='posten-rteStyle-excelSmall'] a, [class='posten-rteStyle-excelSmall'] a:link, [class='posten-rteStyle-excelSmall'] a:visited, [class='posten-rteStyle-excelSmall'] a:hover, 
+	a [class='posten-rteStyle-excelLarge'], [class='posten-rteStyle-excelLarge'] a, [class='posten-rteStyle-excelLarge'] a:link, [class='posten-rteStyle-excelLarge'] a:visited, [class='posten-rteStyle-excelLarge'] a:hover, 
+	a [class='posten-rteStyle-wordSmall'], [class='posten-rteStyle-wordSmall'] a, [class='posten-rteStyle-wordSmall'] a:link, [class='posten-rteStyle-wordSmall'] a:visited, [class='posten-rteStyle-wordSmall'] a:hover, 
+	a [class='posten-rteStyle-wordLarge'], [class='posten-rteStyle-wordLarge'] a, [class='posten-rteStyle-wordLarge'] a:link, [class='posten-rteStyle-wordLarge'] a:visited, [class='posten-rteStyle-wordLarge'] a:hover, 
+	a [class='posten-rteStyle-newwindow'], [class='posten-rteStyle-newwindow'] a, [class='posten-rteStyle-newwindow'] a:link, [class='posten-rteStyle-newwindow'] a:visited, [class='posten-rteStyle-newwindow posten-newwindow-noimage'] a:link, [class='posten-rteStyle-newwindow posten-newwindow-noimage'] a:visited, [class='posten-rteStyle-newwindow posten-newwindow-noimage'] a:hover, 
+    a [class='posten-rteStyle-externallink'], [class='posten-rteStyle-externallink'] a, [class='posten-rteStyle-externallink'] a:link, [class='posten-rteStyle-externallink'] a:visited, [class='posten-rteStyle-externallink posten-externallink-noimage'] a:link, [class='posten-rteStyle-externallink posten-externallink-noimage'] a:visited, [class='posten-rteStyle-externallink posten-externallink-noimage'] a:hover
+	{
+		text-decoration: underline;
+    }  
+/******* END MARKUP STYLES *******/
+

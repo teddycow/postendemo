@@ -1,0 +1,1837 @@
+﻿/* =content page rules
+---------------------------------------------------*/
+.ms-WPBody td /* Overrides corev4.css font rules. Should be moved to merge-fixes.css. */
+{
+    font-family: Calibri, 'Calibri Lite', Arial, Sans-Serif !important;
+}
+.NW-mainPanel, 
+.errorPanel, 
+.postalCodeSearchResult, 
+.PWP-columnModule
+{
+    width: 548px; /* width of Nordic Web content (including padding). */
+}
+
+/* =typography
+---------------------------------------------------*/
+
+/* sizes */
+.NW-mainPanel h2, 
+.lblComplaintHeader
+{
+    font-size: 22px;
+}
+.NW-mainPanel h3, 
+.errorPanel h3, 
+.formField h3, 
+.NW-mainPanel h3 span, 
+.pickupPlaceHeader, 
+h3.searchResultsHeader
+{
+    font-size: 18px;
+}
+
+.NW-mainPanel .finnish h3
+{
+    margin-top:2px;    
+}
+
+.mandatory-info
+{
+    display:inline-block;
+    margin-top: 26px; 
+}
+
+.NW-mainPanel h5, 
+.errorPanel h4, 
+.pickupPlaceInfoLabel, 
+.lblBookingNumber
+{
+    font-size: 16px;
+}
+.errorPanel, 
+.NW-mainPanel, 
+.postalCodeSearchResult, 
+.PWP-moduleTable tr td,
+ul.ui-autocomplete li a
+{
+    font-size: 14px;
+}
+.ui-datepicker-title
+{
+    font-size: 10px;
+}
+/* weights */
+.errorPanel, 
+.errorPanel h3, 
+.formField h3, 
+.NW-mainPanel, 
+.postalCodeSearchResult
+{
+    font-weight: normal;
+}
+h3.headerContactRequest, 
+.bold, 
+.dataDisplay .NW-LabelCell label,
+.lblBookingNumber, 
+.NW-mainPanel h3, 
+.NW-mainPanel .subHeader, 
+.NW-mainPanel.pickupBookingPanel .lblCustomerName, 
+.pickupPlaceHeader, 
+.previewDataPanel .NW-LabelCell label,
+.ui-datepicker-title 
+{
+    font-weight: bold;
+}
+h3.searchResultsHeader
+{
+    font-weight: normal;
+}
+/* styles */
+.NW-mainPanel h3 span
+{
+    font-style: normal;
+}
+.andOrRow
+{
+    clear: both;
+    display: block;
+    font-style: italic;
+}
+h3.searchResultsHeader,
+.errorPanel h3, 
+.formField h3, 
+.NW-mainPanel h3
+{
+    background: url(images/heading_bg.png) no-repeat;
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    margin: 28px 0 14px;
+    padding: 7px 14px;
+    width: 520px; /* width of Nordic Web content (excluding padding). */
+}
+.errorPanel h3
+{
+    background-position: left -32px;
+    margin-top: 20px;
+}
+h3.searchResultsHeader, 
+.module.PWP-columnModule,
+.PWP-inputTable.dataDisplay 
+{
+    margin-bottom: 20px;
+}
+h3.headerSubscriberRegister
+{
+    margin-bottom: 11px;
+}
+.NW-mainPanel h4
+{
+    margin-top: 14px;
+}
+.NW-mainPanel h5
+{
+    margin:  17px 0 7px;
+    padding: 0;
+}
+
+/* =colors
+----------------------------------------------------------------*/
+/*
+----------------------------------------------------------------
+body copy (dark grey/black): #333
+links etc. (blue): #194b96
+disabled element text (light grey): #999
+error text (red): #f00
+----------------------------------------------------------------
+*/
+.errorPanel, 
+.errorPanel p, 
+.NW-mainPanel, 
+.NW-mainPanel h3, 
+.NW-mainPanel h4, 
+.NW-mainPanel > span, 
+.postalCodeSearchResult
+{
+    color: #333;
+}
+ul.ui-autocomplete li.ui-menu-item a.ui-state-hover, 
+.inputWrapper.button.disabled > input, 
+.NW-mainPanel a, 
+.NW-mainPanel h2, 
+.NW-mainPanel h5,
+.NW-mainPanel.pickupBookingPanel .lblCustomerName,
+.lblComplaintHeader, 
+.pickupPlaceInfoLabel, 
+.termsAndConditions a,
+.ui-datepicker-title
+{
+    color: #194b96;
+}
+input[type="text"].txbReadOnlyCityServiceCoverage, 
+button.grey.disabled > input,
+.NW-mainPanel input[type="text"].txbReadOnlyCity
+{
+    color: #999;
+}
+h5.deliveryStatusLabel, 
+h5.dpdStatusLabel, 
+.NW-mainPanel .linkWithArrow
+{
+    color: #333;
+}
+.errorPanel h3
+{
+    color: #fff !important;
+}
+.NW-mainPanel .lblComplaintErrorMessage, 
+.NW-mainPanel-lblLoginError, 
+.NW-mainPanel .litErrorMessage
+{
+    color: #f00 !important;
+}
+.NW-mainPanel .subHeader
+{
+    display: block;
+    margin: 0 14px 5px;
+}
+
+/* =links
+----------------------------------------------------------------*/
+.NW-mainPanel .linkWithArrow
+{
+    text-decoration: none;
+}
+.subscriberAccountPanel .NW-mainPanel .linkWithArrow
+{
+    margin-left: 14px;
+}
+.NW-mainPanel .linkWithArrow:after
+{
+    content: url('/_layouts/images/posten/arrow_common_right.png');
+    margin-left: 2px;
+}    
+.NW-mainPanel.subscriberAccountPanel .PWP-inputTable .linkWithArrow
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* =images
+----------------------------------------------------------------*/
+.mapLegend > div, 
+.ui-datepicker-prev, 
+.statusDelivered, 
+.ui-datepicker-next, 
+.dpdValid, 
+.dpdInvalid
+{
+    background: url('images/posten-sprite.png') no-repeat;
+}
+.arrowLink, 
+.arrowImage, 
+.PWP-columnModule .round > *
+{
+    background: url('images/spritemap_common.png') no-repeat;
+}
+.PWP-columnModule .column .content, 
+.PWP-columnModule .column .gradientBottom, 
+.PWP-columnModule .column:first-child, .column.left, 
+.pnlInfoDelivery
+{
+    background: url('images/gradient_line_vertical.png') no-repeat;
+}
+.horizontalLine, 
+.PWP-columnModule .fullWidthContent, 
+ul.ui-autocomplete li
+{
+    background: url('images/gradient_line_horizontal.png') no-repeat;    
+}
+.noLineBreak
+{
+    white-space: nowrap;
+}
+
+/* =label
+----------------------------------------------------------------*/
+.NW-mainPanel .itemInfoLink
+{
+    margin-right: 10px;
+    width: 170px;
+}
+.NW-mainPanel .contactRequestTable label
+{
+    width: auto;
+}
+.NW-mainPanel .txbSearchPostalCode label
+{
+    height: 24px;
+    overflow: hidden;
+    white-space: pre;
+    width: 338px;
+}
+.NW-mainPanel .itemInfoLink, 
+.NW-mainPanel label + span, 
+.NW-mainPanel.pickupBookingPanel .itemRow, 
+.NW-mainPanel.pickupBookingPanel .lblItemName, 
+.PWP-inputTable td label, 
+.NW-mainPanel.subscriberRegisterPanel .PWP-inputTable td.label, 
+.NW-mainPanel.subscriberAccountPanel .PWP-inputTable td.label, 
+.subscriberRegisterPanel .subscriberRegisterTable td.input > div, 
+.NW-mainPanel.pickupBookingPanel .button.grey + span.PWP-inputWrapper.checkbox
+{
+    line-height: 24px;    
+}
+.NW-mainPanel .itemInfoLink
+{
+    float: left;
+}
+.NW-mainPanel .lblInline
+{
+    display: inline-block;
+    margin-top: 0;
+}
+/* =textbox, textarea, dropdownlist
+----------------------------------------------------------------*/
+textarea.PWP-textboxMultiLine.empty /* This should be moved to Point as soon as possible */
+{
+    color: #999;
+}
+/* The 'pnlStandardInput' is a panel used on forms with an open design (non-module based forms). */
+.NW-mainPanel textarea,
+.NW-mainPanel.pnlStandardInput input[type="text"],
+.NW-mainPanel.pickupBookingPanel input[type="text"]
+{
+    width: 305px;
+}
+/* The 'pnlModuleInput' is a panel used on forms with a module based design. */
+.pnlModuleInput input[type="text"]
+{
+    width: 328px;
+}
+.pnlModuleInput .PWP-textbox.city
+{
+    width: 263px;
+}
+.NW-mainPanel.pickupBookingPanel input[type="text"].txbDate, 
+.NW-mainPanel.pnlLate input[type="text"].txbDate
+{
+    width: 103px;
+}
+.NW-mainPanel.pickupBookingPanel .ddlContactPerson
+{
+    width: 232px;
+}
+.NW-mainPanel.pickupBookingPanel .lblFrom
+{
+    display: inline-block;
+    width: 60px;
+    vertical-align: top;
+    padding-top: 3px;
+}
+.NW-mainPanel.pickupBookingPanel .lblTo
+{
+    display: inline-block;
+    width: 12px;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 3px;
+}
+.NW-mainPanel.pickupBookingPanel .lblItemName
+{
+    clear: both;
+    float: left;
+    margin-left: 0px;
+    padding: 0;
+    width: 130px;
+}
+.NW-mainPanel.pickupBookingPanel .txbTotalWeight
+{
+    width: 103px;
+    display: inline-block;
+}
+.NW-mainPanel.pickupBookingPanel span.txbItemCount
+{
+    float: left;
+    margin-left: 10px;
+}
+.NW-mainPanel.pickupBookingPanel input[type="text"].txbItemCount,
+.NW-mainPanel.pickupBookingPanel input[type="text"].txbTime
+{
+    width: 40px;
+}
+.NW-mainPanel.pickupBookingPanel .ttItemInfo
+{
+    margin-left: 8px;
+}
+.NW-mainPanel.pickupBookingPanel .lblEmptyContainers
+{
+    display: block;
+    line-height: 17px;
+    position: relative;
+    top: -21px;
+}
+.NW-mainPanel.pnlDescriptionOfDamagedOrMissing td.label, 
+.NW-mainPanel.pnlCashOnDelivery td.label, 
+.NW-mainPanel.pnlLate td.label
+{
+    vertical-align: top;
+}
+.NW-mainPanel .requiredFieldModule
+{
+    display: inline-block;
+}
+.NW-mainPanel .fullWidthContent .requiredFieldModule
+{
+    display: inline;
+}
+.NW-mainPanel .pnlTransitTimeSearchModule .PWP-columnModule select
+{
+    width: 148px;
+}
+.NW-mainPanel .pnlTransitTimeSearchModule .PWP-columnModule select.ddlServices
+{
+    width: auto;
+}
+.NW-mainPanel .pnlTransitTimeSearchModule .PWP-columnModule label
+{
+    width: 81px;
+}
+.NW-mainPanel .pnlTransitTimeSearchModule .PWP-columnModule span.requiredmarker + label
+{
+    width: 71px;
+}
+.lblComplaintErrorMessage
+{
+    display: block;
+    margin-top: 10px;
+    padding-top: 28px;    
+}
+.NW-mainPanel .pnlConfirmationForm
+{
+    margin-bottom: 20px;
+}
+.NW-mainPanel .askCustomerServiceTable textarea
+{
+    width: 305px;
+}
+.NW-mainPanel .PWP-columnModule span.PWP-ddlCountry
+{
+    width: 167px;
+}
+.NW-mainPanel input[type="text"].txbCity, 
+input[type="text"].txbReadOnlyCity
+{
+    width: 159px;
+}
+.NW-mainPanel input[type="text"].txbCurrencyValue
+{
+    width: 86px;
+}
+.NW-mainPanel input[type="text"].txbPhone
+{
+    width: 213px;
+}
+.NW-mainPanel input[type="text"].txbPostalCode
+{
+    width: 43px;
+}
+.NW-mainPanel input[type="text"].txbStreetNumber
+{
+    width: 28px;
+}
+.NW-mainPanel .inputWrapper.dropdownlist.ddlCurrency
+{
+    width: 76px;
+}
+.NW-mainPanel .PWP-columnModule input[type="text"].txbCity
+{
+    width: 81px;
+}
+.NW-mainPanel .PWP-columnModule input[type="text"].txbStreet
+{
+    width: 96px;
+}
+.NW-mainPanel #register input[type="text"]
+{
+    width: 230px;
+}
+.inputWrapper.dropdownlist.ddlPhoneCountryCode > span
+{
+    min-width: 100px;
+}
+.NW-mainPanel.pickupBookingPanel input[type="text"].txbCity
+{
+    width: 244px;
+}
+input[type="text"].txbReadOnlyCityServiceCoverage
+{
+    width: 247px;
+}
+.NW-mainPanel.pickupBookingPanel input[type="text"].txbCustomerNumber
+{
+    width: 117px;
+}
+.NW-mainPanel .postalCode input[type="text"].textbox.city
+{
+    width: 248px;
+}
+.NW-mainPanel.complaintsPanel input[type="text"].txbCity
+{
+    width: 244px;
+}
+.NW-mainPanel.complaintsPanel .ddlComplaintReason
+{
+    width: 216px;
+}
+.NW-mainPanel.complaintsPanel .lblMissingReceiverInfo
+{
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.NW-mainPanel.subscriberAccountPanel .pnlEdit input[type="text"]
+{
+    width: 275px;
+}
+.NW-mainPanel.subscriberAccountPanel input[type="text"].txbEmail
+{
+   width: 263px;
+    /* width: 305px; */
+}
+.NW-mainPanel.subscriberAccountPanel input[type="text"].txbPassword
+{
+   /* width: 152px; */
+    width: 200px;
+}
+.NW-mainPanel.subscriberAccountPanel .txbPassword + a, 
+.NW-mainPanel .PWP-PostenDropDownList.PWP-inputWrapper + a
+{
+    margin-left: 10px;
+}
+.NW-mainPanel .ms-dtinput img /* calendar icon on 'PickupBookingContactPerson.ascx' */
+{
+    margin-left: 14px;
+}
+.NW-mainPanel .PWP-columnModule .ms-dtinput img /* calendar icon on 'TransitTimeSearchControl.ascx' */
+{
+    margin-left: 0;
+}
+.NW-mainPanel table
+{
+    border-collapse: collapse;
+}
+.PWP-inputTable td .txbTooltip + .tooltip
+{
+    left: 0;
+    margin-left: 9px;
+    top: -4px;
+}
+.PWP-inputTable td .txbTooltip input
+{
+    width: 293px;
+}
+.PWP-dropdownlist.PWP-ddlPhonePrefix
+{
+    width: 120px;
+    margin-right:9px;
+}
+.NW-mainPanel .PWP-columnModule select
+{
+    margin-right: 0;
+    width: 166px;
+}
+.errorPanel h3 + h3
+{
+    background: none;
+}
+.errorPanel h4, 
+.errorPanel p
+{
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.errorPanel h4
+{
+    margin-top: 14px;
+}
+.errorPanel p
+{
+    margin-top: 10px;
+}
+.NW-mainPanel .errorSummary
+{
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.spGridView
+{
+    border-collapse: separate;
+}
+.gridViewTable, 
+.ms-listviewtable, 
+ms-listviewTable tbody
+{
+    border: 1px solid #dbd4c5;
+}
+.arrow /* arrow icon for expanding information */
+{
+    padding-bottom: 2px;
+    padding-left: 5px;
+}
+hr + span.theme
+{
+    float: right;
+}
+.clear, 
+.NW-mainPanel .itemInfoLink
+{
+    clear: both;
+}
+
+/* counter POINT merge-fixes ul affecting checkboxes and radiobuttons */
+ul.PWP-inputWrapper
+{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+/* checkbox */
+.checkBoxList, 
+.radioButtonList
+{
+    border-collapse: collapse;
+}
+.checkBoxList label
+{
+    line-height: 19px;
+    margin-left: 5px;
+    margin-right: 30px !important;
+    width: auto;
+}
+.checkBoxList td
+{
+    padding: 0;
+}
+/* radiobutton */
+.radioButtonList label /* space between radiobutton label and next radiobutton in horizontal RadioButtonLists */
+{
+    margin-right: 20px;
+}
+.propertyLabel, 
+#lblDateLabel 
+{
+    margin-right: 14px;
+    width: 158px;
+}
+.propertyLabel + span
+{
+    display: block;
+    padding-top: 4px;
+}
+.NW-mainPanel .odd
+{
+    background: #eee;
+}
+
+/* =column module (NTTViewItem, ServiceCoverageControl, ServicePointSearchControl, TransitTimeSearchControl)
+****************************************************************************/
+.PWP-columnModule
+{
+    z-index: 1;
+}
+.PWP-columnModule .content
+{
+    padding: 0 12px;
+}
+.PWP-columnModule .content label
+{
+    width: 67px;
+}
+.PWP-columnModule .column + .column
+{
+    padding-left: 8px;
+    width: 249px;
+}
+.PWP-columnModule .column .content
+{    
+    background-position: 273px top;
+    margin-top: 10px; /* forces divider to move down to generate whitespace between header and content */
+}
+.PWP-columnModule .column .gradientBottom
+{
+    background-position: right top; 
+    bottom: 0;
+    float: right;
+    height: 38px; 
+    position: absolute;
+    right: 274px;
+    width: 1px; 
+}
+.PWP-columnModule .pickupPlaceInfoColumn label
+{
+    display: inline-block;
+    margin-right: 0;
+    width: 126px;
+}
+.PWP-columnModule .fullWidthContent
+{
+    margin: 0;
+    padding-top: 14px;
+}
+.PWP-columnModule .column + .column .round .left,
+.PWP-columnModule .column:first-child .round .right
+{
+    background: none; /* removes the rounded corners between columns (only the outer corners should have rounded corners) */
+}
+/* the column div should only be used when there are two or more columns to be present */
+.PWP-columnModule .column
+{    
+    float: left; /* stacks columns horizontally */
+    margin-bottom: 12px;
+    width: 260px;
+}
+.PWP-columnModule .column:first-child, 
+.column.left, 
+.pnlInfoDelivery
+{
+    background-position: 259px top;
+}
+.PWP-columnModule .header
+{
+    background: url('images/spritemap_common_vertical.png') repeat-x; /* gradient header background */
+    border-bottom: 1px solid #dbd4c5;
+    height: 38px;
+    padding: 0;
+}
+/* contains the divs which holds the rounded corner images */
+.PWP-columnModule .round
+{
+    height: 6px;
+    left: 0;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+.PWP-columnModule .round.top
+{
+    top: -1px; /* forces the corner image to cover the mainBorder's corner border */
+}
+.PWP-columnModule .round.bottom
+{
+    bottom: -1px; /* forces the corner image to cover the mainBorder's corner border */
+}
+/* applies to the corner divs inside the round-div */
+.PWP-columnModule .round > *
+{
+    height: 6px;
+    position: absolute;
+    width: 6px;
+    z-index: 10;
+}
+.PWP-columnModule .left
+{
+    left: -1px; /* forces the corner image to cover the mainBorder's corner border */
+}
+.PWP-columnModule .right
+{
+    right: -1px; /* forces the corner image to cover the mainBorder's corner border */
+}
+.PWP-columnModule .round.top .left
+{
+    background-position: -13px -49px; /* positions the image to show only the top left corner */
+}
+.PWP-columnModule .round.top .right
+{
+    background-position: -19px -49px; /* positions the image to show only the top right corner */
+}
+.PWP-columnModule .round.bottom .left
+{
+    background-position: -13px -55px; /* positions the image to show only the bottom left corner */
+}
+.PWP-columnModule .round.bottom .right
+{
+    background-position: -19px -55px; /* positions the image to show only the bottom right corner */
+}
+.PWP-columnModule.tabbed
+{
+    border: none;
+    margin-bottom: 0;
+}
+.PWP-columnModule.tabbed .round.top
+{
+    border-left: 1px solid #dbd4c5;
+}
+.PWP-columnModule.tabbed .round.top .left
+{
+    background: none;
+}
+.PWP-columnModule.tabbed .round.top .right
+{
+    right: 1px;
+}
+.PWP-columnModule .fullWidthContent input[type="text"]
+{
+    width: 82px;
+}
+.PWP-columnModule .column .content select
+{
+    width: 148px;
+}
+.PWP-columnModule .column .content label:first-child
+{
+    margin-top: 0;
+}
+.PWP-columnModule .validationText
+{
+    margin-left: 93px;
+}
+.PWP-columnModule, 
+.PWP-columnModule .fullWidthContent ul, 
+.PWP-columnModule .fullWidthContent .PWP-PostenDropDownList,
+.PWP-columnModule .column .PWP-PostenDropDownList, 
+.PWP-columnModule .fullWidthContent table, 
+.PWP-columnModule .PWP-textbox, 
+.NW-mainPanel .PWP-columnModule .PWP-dropdownlist, 
+.NW-mainPanel.complaintsPanel input[type="text"], 
+.NW-mainPanel.pickupBookingPanel .itemRow, 
+.NW-mainPanel h4, 
+.NW-mainPanel .linkWithArrow, 
+.NW-mainPanel .itemInfoLink, 
+.lblComplaintErrorMessage, 
+.errorPanel h4, 
+.errorPanel p
+{
+    margin-bottom: 10px;
+}
+.PWP-tabsWrapper .PWP-PostenDropDownList
+{
+    margin-bottom: 0;
+}
+
+.module.fileUploadModule
+{
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.module.fileUploadModule > .content
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+/* Google maps specific rounded corners */
+/****************************************/
+#divMap
+{
+    border: 1px solid #dbd4c5;
+}
+.round.top + .olMapViewport
+{
+    bottom: -6px;
+    top: -6px;
+    z-index: 1;
+}
+#divMap + .round.bottom
+{
+    bottom: 6px;
+}
+.PWP-columnModule.map
+{
+    border: 0;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 520px;
+}
+.PWP-columnModule.map .round.bottom .left
+{
+    left: 0;
+}
+.PWP-columnModule.map .round.bottom .right
+{
+    right: -2px;
+}
+.PWP-columnModule #divMap + .round
+{
+    width: 520px;
+}
+/*****************************************/
+
+/* Opacity fix for Google Maps popups from OpenLayers in IE8+ */
+.olPopup div[id$="GroupDiv"], 
+.olPopup div[id$="GroupDiv"] div
+{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+/* NTTSubscriberRegister */
+.subscriberRegisterPanel .termsAndConditions
+{
+    padding: 0;
+}
+/* Autocomplete for textboxes */
+ul.ui-autocomplete
+{
+    background: #fff;
+    border: 1px solid #eeeae2;
+    z-index: 1200 !important;
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    padding-right: 20px; /* add padding to account for vertical scrollbar */
+    position: absolute !important;    
+    width: 258px;
+    list-style: none;
+    padding-left: 0;    
+}
+ul.ui-autocomplete li
+{
+    padding: 10px 4px;
+}
+ul.ui-autocomplete li:first-child
+{
+    background: none;
+}
+ul.ui-autocomplete li a
+{
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+.findServicePoint label
+{
+    margin-bottom: 0;
+    width: 75px;
+}
+.addressAutocomplete label
+{
+    height: 24px;
+    overflow: hidden;
+    white-space: pre;
+    width: 331px;
+}
+/* input table */
+.PWP-inputTable tr:last-child > *
+{
+    padding-bottom: 0;
+}
+.postalCode.byPostalCode .PWP-inputTable tr:last-child > *
+{
+    padding-top: 2px;
+}
+.module .PWP-inputTable td
+{
+    margin: 0;
+    padding: 0;
+}
+.PWP-inputTable td .checkbox label
+{
+    line-height: 14px;
+}
+/* textboxes on transit time page */
+.PWP-inputTable .inputWrapper.textbox
+{
+    margin-top: 0;
+    top: 0;
+}
+.popupInfo
+{
+    background: #fff;
+    border: 1px solid #dbd4c5; 
+    border-radius: 7px;
+    box-shadow: 0 2px 2px 0 #888;
+    margin: 0;
+    padding: 10px;
+}
+.PWP-tabsWrapper > div
+{
+    position: relative;
+    top: -1px;
+}
+.PWP-tabsWrapper > ul > li > a
+{
+    text-decoration: none;
+}
+.PWP-tabsWrapper > ul > li.active
+{
+    z-index: 0 !important; /* prevents white bottom border from overlapping left border on left tab */
+}
+.tabModuleControl .edge.top .left.border
+{
+    background: none !important;
+}
+.PWP-tabsWrapper > div > .PWP-module > .edge.top > .right.border
+{
+    margin-top: 0 !important;
+}
+/* fix for tab design */
+div.PWP-tabsWrapper > ul {
+    border-bottom: 1px solid #DBD4C5;
+    height: 39px;
+    list-style: none outside none;
+    margin: 20px 0 0;
+    overflow: visible;
+    padding: 0;
+}
+.NW-QuestionConfirmation, 
+.NW-LabelTextbox
+{
+    overflow: hidden;
+    display: block;
+    width: inherit;
+}
+/* map legend */
+.mapLegend
+{
+    line-height: 26px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+.mapLegend > div
+{
+    background-position: -228px -630px;
+    display: inline-block;
+    height: 17px;
+    margin-left: 6px;
+    margin-right: 3px;
+    position: relative;
+    top: 4px;
+    width: 17px;    
+}
+.ie7 .mapLegend > div
+{
+    display: inline;
+    top: 0;
+}
+.locationLegend
+{
+    background: url('images/location_legend.png') no-repeat;
+    float: left;
+    height: 26px;
+    padding-left: 23px;
+    padding-top: 5px;
+}
+.mapLegend div:first-child
+{
+    background-color: #009e30;
+}
+.mapLegend div:first-child + div
+{
+    background-color: #ffe400;
+}
+.mapLegend div:first-child + div + div
+{
+    background-color: #ff8a00;
+}
+.mapLegend div:first-child + div + div + div
+{
+    background-color: #ed1c24;
+}
+.mapLegend div:first-child + div + div + div + div
+{
+    background-color: #92278f;
+}
+.arrowLink
+{
+    background-position: -255px -52px;
+    display: inline-block;
+    height: 7px;
+    margin-left: 5px;
+    position: relative;
+    width: 4px;
+}
+.arrowImage
+{
+    background-position: -69px -48px;
+    height: 24px; 
+    left: -4%;
+    position: absolute; 
+    top: 40%; 
+    width: 10px;    
+}
+.ui-datepicker
+{
+    background: #f6f3ee;
+    border: 1px solid #dbd4c5;
+    border-radius: 7px;
+    box-shadow: 0 2px 2px 0 #888;
+    padding: 10px;
+    width: 150px;
+    display:none;
+}
+.ui-datepicker-trigger, 
+.ui-datepicker-title, 
+.ui-datepicker-calendar
+{
+    position: relative;    
+}
+.ui-datepicker-calendar
+{
+    left: 5px;
+}
+.ui-datepicker-trigger
+{
+    background: none;
+    left: 5px;
+    top: 3px;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next
+{
+    display: inline-block;  
+    cursor: pointer;
+    height: 24px;
+    width: 24px;            
+}
+.ui-datepicker-prev
+{
+    background-position: -283px -630px;
+}
+.ui-datepicker-next
+{
+    background-position: -308px -630px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.ui-datepicker-prev span, 
+.ui-datepicker-next span
+{
+    display: none;
+}
+.ui-datepicker-title
+{
+    margin: 0 25px;
+    text-align: center;
+    top: -19px;
+}
+.ui-datepicker td.ui-datepicker-today, 
+.ui-datepicker td.ui-datepicker-current-day
+{
+    /* border-radius: 3px; */
+}
+.ui-datepicker td.ui-datepicker-today
+{
+    border: 1px solid #194b96;
+}
+.ui-datepicker td.ui-datepicker-current-day
+{
+    background: #dbd4c5;
+}
+/* page specific tables */
+.PWP-moduleTable.servicePointTable th:first-child
+{
+    width: 192px;
+}
+.PWP-moduleTable.transitTimeTable th:first-child
+{
+    width: 145px;
+}
+.PWP-moduleTable.transitTimeTable th:first-child + th, 
+.PWP-moduleTable.transitTimeTable th:last-child
+{
+    width: 87px;
+}
+.PWP-moduleTable.transitTimeTable th:first-child + th + th
+{
+    width: 125px;
+}
+.PWP-moduleTable.transitTimeTable .PWP-tooltip
+{
+    float: right;
+}
+/* NTT status label */
+.statusDelivered
+{
+    background-position: -145px -630px;
+    display: block;
+    float: left;
+    height: 36px;
+    margin-right: 9px;
+    width: 36px;
+}
+h5.deliveryStatusLabel
+{
+    display: inline;
+    line-height: 36px;
+}
+.pickupPlaceInfoColumn
+{
+    margin-top: 3px;
+}
+.PWP-columnModule .column.pickupPlaceInfoColumn label
+{
+    line-height: normal;
+}
+.pickupPlaceHeader
+{
+    margin-top: -4px;
+}
+.pickupPlaceHeader, 
+.pickupPlaceInfoLabel
+{
+    display: block;
+    margin-bottom: 5px; 
+    width: 249px !important;   
+}
+.postalCode td.label label
+{
+    width: 154px;
+}
+.postalCode .button
+{
+    float: right;
+    margin-left: 9px;
+    margin-top: 14px;
+}
+td.andOrRow /* SearchPostalCode */
+{
+    padding: 0;
+}
+.dpdStatusResults
+{
+    margin-top: 21px;
+}
+.dpdStatusResults .dpdStatusLabel
+{
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.dpdValid, 
+.dpdInvalid
+{
+    float: left;
+    height: 36px;
+    width: 36px;
+}
+.dpdValid
+{
+    background-position: -145px -630px;
+}
+.dpdInvalid
+{
+    background-position: -246px -630px;
+}
+.horizontalLine
+{
+    height: 1px;
+}
+.lblBookingNumber + .horizontalLine, 
+.NW-mainPanel-lblLoginError, 
+.horizontalLine, 
+.dpdValid, 
+.dpdInvalid
+{
+    display: block;
+}
+.paginationButton
+{
+    float: left;
+}
+.paginationButton + .paginationButton
+{
+    float: right;
+}
+.PWP-inputTable.dataDisplay td > .PWP-validatorWrapper > .controls
+{
+    height: auto;
+}
+.statusModule > .content.theme
+{
+    padding-bottom: 14px;
+}
+.nttEventsTable th:first-child
+{
+    width: 27%;
+}
+.nttEventsTable th:first-child + th
+{
+    width: 32%;
+}
+.nttSearchInputTable
+{
+    padding-bottom: 20px;
+    padding-right: 2px;
+}
+.nttSearchInputTable .PWP-textbox
+{
+    margin-right: 0;
+    margin-left: auto;
+}
+.nttSearchInputTable input[type="text"]
+{
+    /*width: 318px;*/
+}
+.pnlModuleInput input.PWP-phone
+{
+    width: 234px;
+    position: absolute;
+}
+.nttSearchInputTable input[type="text"].PWP-SMSCode
+{
+    width: 326px;
+}
+.NW-InputRow
+{
+    margin: 10px 0;
+    width: 100%;
+}
+.NW-LabelCell
+{
+    display:inline-block;
+    margin: 0 10px 0 14px;
+    padding: 3px 0 0 0;
+    vertical-align:top;
+    width: 174px;
+}
+.tabModuleControl .NW-LabelCell, 
+.PWP-module .NW-LabelCell
+{
+    margin-left: 0;
+}
+.NW-InputCell
+{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 332px;
+}
+.manySearchResultsMessage
+{
+    margin: 14px;
+}
+/* grey button */
+.inputWrapper.button.grey > .PWP-edge
+{
+    height: 0;
+} 
+.inputWrapper.button.grey > .PWP-edge.top > .left
+{
+    background-position: 0 -24px;
+}
+.inputWrapper.button.grey:hover > .PWP-edge.top > .left
+{
+    background-position: 0 -96px;
+}
+.inputWrapper.button.grey > .PWP-edge.top > .right
+{
+    background-position: 0 -48px;
+}
+.inputWrapper.button.grey:hover > .PWP-edge.top > .right
+{
+    background-position: 0 -120px;
+}
+.inputWrapper.button.grey > .PWP-edge.bottom, .inputWrapper.button.grey > .PWP-edge.bottom
+{
+    display: none;
+}
+.previewDataPanel .PWP-inputTable .NW-LabelCell, 
+.dataDisplay.PWP-inputTable .NW-LabelCell
+{
+    vertical-align: top;
+}
+*:first-child+html .NW-mainPanel .button.PWP-inputWrapper > input
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+.NW-mainPanel.pickupBookingPanel .button.grey
+{
+    margin: 0 0 0 10px;
+}
+.NW-mainPanel .subscriberRegisterTable .PWP-inputWrapper.button.grey
+{
+    margin-bottom: 10px;
+}
+.NW-mainPanel.pickupBookingPanel .PWP-inputWrapper.button.grey.deletebutton,
+.NW-mainPanel.pickupBookingPanel .PWP-inputWrapper.button.grey.deletebutton input[type="submit"]
+{
+    float: none;
+    position: absolute;
+}
+.NW-mainPanel.pickupBookingPanel .button.grey + span.PWP-inputWrapper.checkbox
+{
+    margin-left: 10px;
+}
+.NW-mainPanel .button.PWP-btnNav
+{
+    margin: 0 0 20px !important;
+}
+.NW-mainPanel.pickupBookingPanel .ddlContactPerson, 
+.NW-mainPanel.pickupBookingPanel .ddlCompanyName, 
+.NW-mainPanel.subscriberAccountPanel .inputWrapper.button + a, 
+.NW-mainPanel.subscriberAccountPanel .inputWrapper.button + a + a
+{
+    float: left;
+}
+
+.NW-mainPanel.complaintsPanel > span:first-child
+{
+    display: block
+}
+
+.NW-mainPanel.complaintsPanel .ddlComplaintReason + a
+{
+    margin-left: 10px;
+}
+.NW-mainPanel.subscriberRegisterPanel .PWP-inputTable td.label, 
+.NW-mainPanel.subscriberAccountPanel .PWP-inputTable td.label
+{
+    vertical-align: top;
+}
+.NW-mainPanel.subscriberRegisterPanel .PWP-inputTable td > .PWP-validatorWrapper > .controls, 
+.NW-mainPanel.subscriberAccountPanel .PWP-inputTable td > .PWP-validatorWrapper > .controls
+{
+    height: auto;
+}
+.NW-mainPanel.subscriberAccountPanel .inputWrapper.button + a + a
+{
+    clear: left;
+}
+.PWP-inputTable.subscriberAccountTable tr:last-child td.input > div
+{
+    padding-bottom: 0;
+}
+.modalButton
+{
+    background: url("/_layouts/images/posten/common/presentation/spritemap_localization_se.png") repeat-x scroll 0 -124px transparent;
+    border: 0 none;
+    color: #fff !important;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+    padding: 1px 11px 4px;
+    text-decoration: none !important;
+}
+.modalButton:hover
+{
+    background: #194b96;
+}
+.refreshButton
+{
+    background: url('images/posten-sprite.png') no-repeat -333px -629px;    
+    display: block;
+    height: 14px;
+    left: 313px;
+    position: relative;    
+    top: -22px;
+    width: 14px;
+}
+.NW-mainPanel.subscriberAccountPanel .pnlEdit .inputWrapper.button.grey
+{
+    float: right;
+    margin: 0 42px 0 0;
+}
+.NW-mainPanel.accountDeletionPopup
+{
+    width: 371px;
+    margin: 40px 0 0 28px;
+}
+.accountDeletionPopupModule
+{
+    background: #f1f0ec url('images/accountDeletionPopup-bg.png') repeat-x;
+}
+.accountDeletionPopupModule, 
+.accountDeletionPopupModule h5
+{
+    margin: 0;
+}
+.accountDeletionPopupModule h5 + p
+{
+    margin-top: 0;
+    padding-left: 46px;
+}
+.exclamationIcon
+{
+    background: url('images/posten-sprite.png') no-repeat -108px -630px;
+    display: inline-block;
+    float: left;
+    height: 36px;
+    margin-right: 10px;
+    width: 36px;
+}
+.registerConfirmReceiptPanel p:first-child > a
+{
+    text-decoration: underline;
+}
+/* =Service information
+-------------------------------------------------------------------------*/
+.NW-mainPanel table.serviceDocuments td
+{
+    height: 24px;
+    font-size: 14px;
+    padding-right: 10px; 
+}
+
+.NW-wpEditorPtm
+{
+    width: 250px;
+}
+
+.NW-wpEditorPtm select,
+.NW-wpEditorPtm input[type="text"]
+{
+    width: 215px;
+    margin-left: 5px;
+}
+
+/* =File upload control
+-------------------------------------------------------------------------*/
+.fileUploadModule .headers
+{
+    font-weight: bold;
+}
+.fileUploadModule .items
+{
+    clear: both;
+}
+.fileUploadModule
+{
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.fileUploadModule .headers span, .fileUploadModule .items span
+{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    padding-right: 25px;
+}
+.fileUploadModule .fileName
+{
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fileUploadModule .fileSize
+{
+    width: 90px;
+}
+.fileUploadModule .headers .fileDeleteHeader
+{
+    width: 50px;
+    padding: 0;
+}
+.fileUploadModule div.fileDelete
+{
+    float: right;
+    line-height: 24px;
+    position: relative;
+    right: 20px;
+    top: 4px;
+}
+.fileUploadModule div.fileinputs
+{
+    margin-top: 4px;
+    position: relative;
+}
+.fileUploadModule div.fakefile
+{
+    left: 0px;
+    margin-right: 8px;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+.fileUploadModule div.fileinputs div.fakefile input
+{
+    border: 1px inset #CCCCCC;
+    height: 24px;
+    margin-right: 10px;
+    padding: 0 3px;
+    vertical-align: top;
+    width: 298px;
+    border-radius: 4px;
+}
+.fileUploadModule input.file
+{
+    cursor: pointer;
+    float: left;
+    position: relative;
+    text-align: right;
+    -moz-opacity: 0;
+    margin-right: 10px;
+    filter: alpha(opacity: 0);
+    opacity: 0;
+    width: 385px;
+    z-index: 2;
+}
+.fileUploadModule .pnlFileUploadModule hr
+{
+    margin: 0 -14px;
+}
+.fileUploadModule .pnlFileUploadModule .items hr
+{
+    margin-left: -14px;
+    margin-right: -14px;
+}
+.fileUploadModule .uploadButton
+{
+    clear: both;
+    display: block;
+    margin-bottom: 24px;
+    margin-left:10px;
+    margin-top: 8px;
+    position: relative;
+    left: -5px;
+}
+*+html .uploadButton
+{
+    border: 0 !important;
+    margin: 4px 5px !important;
+}
+.fileUploadModule .clear
+{
+    clear: both;
+}
+.fileUploadModule .clear + span /* error text position */
+{
+    position: relative;
+    top: -8px;
+}
+
+/* =progress bar (do NOT rearrange the CSS rules within this section!)
+-------------------------------------------------------------------------*/
+.flowProgress
+{
+    background: #f6f3ed;
+    margin-bottom: 14px;
+}
+.flowProgress, 
+.flowProgress > *
+{
+    height: 32px;
+}
+.flowProgress > *
+{
+    background: url('images/posten-sprite.png') no-repeat -738px -32px;    
+    float: left;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 32px;
+    width: 182px;
+}
+.flowProgress > .edge
+{
+    position: relative;
+}
+.flowProgress .left
+{
+    float: left;
+    margin-right: 8px;
+    position: relative;
+}
+.flowProgress > .currentstage
+{
+    background: #dbd4c5;
+}
+.flowProgress > .firststage.currentstage
+{
+    background: #dbd4c5 url('images/posten-sprite.png') no-repeat -738px 0;
+}    
+.flowProgress > .middlestage
+{
+    padding-left: 14px;
+    width: 169px;
+}
+.flowProgress .middle, 
+.flowProgress .middlestage.currentstage
+{
+    background: #dbd4c5 url('images/posten-sprite.png') no-repeat -908px -631px;    
+}
+.flowProgress .middlestage.currentstage
+{
+    left: -12px;
+    padding-left: 26px;
+}
+.flowProgress .middle
+{
+    float: right;
+    height: 32px;
+    position: relative;
+    width: 12px;
+}
+.flowProgress > .firststage.currentstage + .middlestage .middle
+{
+    background: url('images/posten-sprite.png') no-repeat -908px -32px;            
+}
+.flowProgress .middlestage.currentstage .middle
+{
+    background-position: -910px 0;
+    width: 10px;
+}
+.flowProgress > .laststage
+{
+    background: none;
+    padding-left: 14px;
+    width: 169px;
+}
+.flowProgress > .laststage.currentstage
+{
+    background: #dbd4c5;
+}
+.flowProgress .middlestage.currentstage + .laststage
+{
+    padding-left: 2px;
+    width: 157px;
+}
+.flowProgress .middlestage.currentstage + .laststage .right
+{
+    right: -12px;
+}
+/*---------------------------------------------------------------------------*/
+
+.PWP-inputTable td > .PWP-validatorWrapper > .controls
+{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.previewDataPanel .PWP-inputTable .NW-InputRow > *, 
+.dataDisplay.PWP-inputTable .NW-InputRow > *, 
+.NW-mainPanel.pickupBookingPanel .PWP-inputTable td > .PWP-validatorWrapper > .controls, 
+.NW-mainPanel .PWP-inputTable.subscriberRegisterTable td > .PWP-validatorWrapper > .controls
+{
+    margin-top: 0;
+}
+.previewDataPanel .PWP-inputTable .NW-InputCell span, 
+.dataDisplay.PWP-inputTable .NW-InputCell span, 
+.subscriberAccountPanel .NW-InputCell > span, 
+.subscriberAccountTable .NW-InputCell > span
+{
+    position: relative;
+    top: 3px;
+}
+.PWP-inputTable.subscriberRegisterTable td.input > div, .PWP-inputTable.subscriberAccountTable td.input > div
+{
+	padding: 5px 0;
+}
+.subscriberRegisterPanel .subscriberRegisterTable td.input > div
+{
+	padding: 0;
+}
+.PWP-inputTable.subscriberRegisterTable tr:last-child td
+{
+	padding-right: 56px;
+}
+.subscriberRegisterPanel .PWP-inputWrapper.checkbox
+{
+	padding-right: 0;
+}
+.subscriberRegisterPanel .PWP-inputWrapper.checkbox > label
+{
+	margin-right: 0;
+}
+.subscriberRegisterPanel .subscriberRegisterTable
+{
+	margin-bottom: 11px;
+}
+.PWP-inputTable.contactRequestTable td.label, .PWP-inputTable.subscriberRegisterTable td.label, PWP-mainPanel.subscriberAccountPanel .PWP-inputTable td.label
+{
+    padding: 0 10px 0 14px;
+    width: 179px;
+}
+input.PWP-textbox.txbSubscriberRegister
+{
+	width: 275px;
+}
+input.PWP-textbox.addressAutocomplete
+{
+    width: 330px;
+}
+.PWP-dropdownlist.PWP-ddlContactRequest + input.PWP-textbox
+{
+	width: 178px;
+}
+.NW-mainPanel input[type="text"].PWP-textbox.postalcode
+{
+	width: 44px;
+}
+input.PWP-textbox.city
+{
+	width: 231px;
+}
+.PWP-inputTable.contactRequestTable input.PWP-textbox.city
+{
+	width: 241px;
+}
+input.PWP-textbox.phone
+{
+    width: 161px;
+}
+.PWP-dropdownlist.PWP-ddlContactRequest > ul
+{
+	width: 123px;
+}
+span.PWP-ddlCountry
+{
+    width: 169px;
+}
+.PWP-dropdownlist.PWP-ddlPhoneCountryCode
+{
+    width: 100px;
+}
+.PWP-dropdownlist.ddlContactRequest > span
+{
+	min-width: 125px;
+}
+.PWP-module.findServicePoint > .content > .PWP-inputTable > tbody > tr:last-child > td.input > .PWP-validatorWrapper > .controls
+{
+	height: 16px;
+}
+
+.ie7 .PWP-inputWrapper.button.grey
+{
+    border: 1px solid #ccc;
+}
+.ie7 .PWP-inputWrapper.button.grey input
+{
+    border: 0;
+    height: 23px;
+}
+
+
+.ajaxLoading, .ajaxLoading > div, .ajaxLoading img
+{
+    display: inline !important;
+}
+.ajaxLoading > div, 
+.ajaxLoading img
+{
+    height: 24px;
+}
+.ajaxLoading img
+{
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+.olControlLoadingPanel
+{
+    background: url('../../../images/Posten/NordicWeb/loading.gif') no-repeat center;
+    width: 30px;
+    height: 30px;
+    display: none;
+    position: relative;
+    left: 260px;
+    top: 250px;
+}
+.pickupPlaceInfoColumn + .gradientBottom
+{
+    background: url("images/gradient_line_vertical_bottom.png") no-repeat;
+    bottom: 1px;
+    float: right;
+    height: 38px;
+    position: absolute;
+    right: 274px;
+    width: 1px;
+}
+.pnlTransitTimeSearchModule .PWP-columnModule .column .gradientBottom
+{
+    background: url('images/gradient_line_vertical_bottom.png') no-repeat;
+    left: 0;
+    position: relative;
+    
+}
