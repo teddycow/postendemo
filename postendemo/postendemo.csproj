@@ -121,7 +121,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="index_files\" />
+    <Folder Include="scripts\index_files\" />
     <Folder Include="spp_files\" />
   </ItemGroup>
   <PropertyGroup>
