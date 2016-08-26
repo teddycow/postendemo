@@ -96,11 +96,85 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="index_files\activityi%281%29.html" />
+    <Content Include="index_files\activityi.html" />
+    <Content Include="index_files\analytics.js" />
+    <Content Include="index_files\brevlador_blue.png" />
+    <Content Include="index_files\brevlador_grey.png" />
+    <Content Include="index_files\com.css" />
+    <Content Include="index_files\compositelibraries.js" />
+    <Content Include="index_files\core.js" />
+    <Content Include="index_files\corev4.css" />
+    <Content Include="index_files\cui.js" />
+    <Content Include="index_files\embed.js" />
+    <Content Include="index_files\ga.js" />
+    <Content Include="index_files\gps_blue.png" />
+    <Content Include="index_files\gps_grey.png" />
+    <Content Include="index_files\gtm.js" />
+    <Content Include="index_files\index_layout.css" />
+    <Content Include="index_files\init.js" />
+    <Content Include="index_files\inplview.js" />
+    <Content Include="index_files\insight.min.js" />
+    <Content Include="index_files\jcarousellite_1.0.1.js" />
+    <Content Include="index_files\jquery-ui-insightera-custom-1.8.css" />
+    <Content Include="index_files\lada_blue.png" />
+    <Content Include="index_files\lada_grey.png" />
+    <Content Include="index_files\meny_blue.png" />
+    <Content Include="index_files\meny_grey.png" />
+    <Content Include="index_files\merge_fixes.css" />
+    <Content Include="index_files\munchkin%281%29.js" />
+    <Content Include="index_files\munchkin.js" />
+    <Content Include="index_files\nya-frimarken-aug-296x140.jpg" />
+    <Content Include="index_files\page-layouts-21.css" />
+    <Content Include="index_files\PNlogoWhite.png" />
+    <Content Include="index_files\postencosafterui.min.js" />
+    <Content Include="index_files\postencoscore.min.js" />
+    <Content Include="index_files\postencostopbannerwebpart.js" />
+    <Content Include="index_files\posten_com.css" />
+    <Content Include="index_files\postnordcore.min.js" />
+    <Content Include="index_files\postnordcoreafterui.min.js" />
+    <Content Include="index_files\postnordtheme_se_2015.css" />
+    <Content Include="index_files\postnord_common.css" />
+    <Content Include="index_files\postnord_flyout.css" />
+    <Content Include="index_files\postnord_rte.css" />
+    <Content Include="index_files\print%281%29.css" />
+    <Content Include="index_files\print.css" />
+    <Content Include="index_files\PrivatBGbild.jpg" />
+    <Content Include="index_files\riktiga-vykort-sommarpojke-296x140.jpg" />
+    <Content Include="index_files\rte_styles.css" />
+    <Content Include="index_files\rtp.js" />
+    <Content Include="index_files\saved_resource%281%29.html" />
+    <Content Include="index_files\saved_resource.html" />
+    <Content Include="index_files\search.js" />
+    <Content Include="index_files\share.js" />
+    <Content Include="index_files\siteanalyze_1908767.js" />
+    <Content Include="index_files\skicka-direkt-296x140.jpg" />
+    <Content Include="index_files\Sok-och-hitta.html" />
+    <Content Include="index_files\sp.core.js" />
+    <Content Include="index_files\sp.js" />
+    <Content Include="index_files\sp.ribbon.js" />
+    <Content Include="index_files\sp.runtime.js" />
+    <Content Include="index_files\sp.ui.dialog.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="index_files\l" />
+    <Content Include="index_files\saved_resource" />
+    <Content Include="index_files\ScriptResource%281%29.axd" />
+    <Content Include="index_files\ScriptResource%282%29.axd" />
+    <Content Include="index_files\ScriptResource.axd" />
+    <Content Include="index_files\ScriptResx.ashx" />
+    <Content Include="index_files\WebResource.axd" />
+    <Content Include="spp_files\l" />
+    <Content Include="spp_files\saved_resource" />
+    <Content Include="spp_files\ScriptResource%281%29.axd" />
+    <Content Include="spp_files\ScriptResource%282%29.axd" />
+    <Content Include="spp_files\ScriptResource%283%29.axd" />
+    <Content Include="spp_files\ScriptResource.axd" />
+    <Content Include="spp_files\ScriptResx.ashx" />
+    <Content Include="spp_files\WebResource.axd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,6 +186,62 @@
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="spara-brev-paket-och-pall.aspx" />
+    <Content Include="spp_files\analytics.js" />
+    <Content Include="spp_files\app-knapp-hamta-i-app-store.jpg" />
+    <Content Include="spp_files\app-knapp-hamta-pa-google-play.jpg" />
+    <Content Include="spp_files\brevlador_blue.png" />
+    <Content Include="spp_files\brevlador_grey.png" />
+    <Content Include="spp_files\com.css" />
+    <Content Include="spp_files\compositelibraries.js" />
+    <Content Include="spp_files\controls.css" />
+    <Content Include="spp_files\core.js" />
+    <Content Include="spp_files\corev4.css" />
+    <Content Include="spp_files\cui.js" />
+    <Content Include="spp_files\embed.js" />
+    <Content Include="spp_files\ga.js" />
+    <Content Include="spp_files\gps_blue.png" />
+    <Content Include="spp_files\gps_grey.png" />
+    <Content Include="spp_files\gtm.js" />
+    <Content Include="spp_files\init.js" />
+    <Content Include="spp_files\insight.min.js" />
+    <Content Include="spp_files\jcarousellite_1.0.1.js" />
+    <Content Include="spp_files\jquery-ui-insightera-custom-1.8.css" />
+    <Content Include="spp_files\lada_blue.png" />
+    <Content Include="spp_files\lada_grey.png" />
+    <Content Include="spp_files\meny_blue.png" />
+    <Content Include="spp_files\meny_grey.png" />
+    <Content Include="spp_files\merge_fixes.css" />
+    <Content Include="spp_files\munchkin%281%29.js" />
+    <Content Include="spp_files\munchkin.js" />
+    <Content Include="spp_files\page-layouts-21.css" />
+    <Content Include="spp_files\PNlogoWhite.png" />
+    <Content Include="spp_files\postencosafterui.min.js" />
+    <Content Include="spp_files\postencoscore.min.js" />
+    <Content Include="spp_files\postencostopbannerwebpart.js" />
+    <Content Include="spp_files\PostenNordicWeb.css" />
+    <Content Include="spp_files\posten_com.css" />
+    <Content Include="spp_files\postnordcore.min.js" />
+    <Content Include="spp_files\postnordcoreafterui.min.js" />
+    <Content Include="spp_files\postnordtheme_se_2015.css" />
+    <Content Include="spp_files\postnord_common.css" />
+    <Content Include="spp_files\postnord_flyout.css" />
+    <Content Include="spp_files\postnord_rte.css" />
+    <Content Include="spp_files\print%281%29.css" />
+    <Content Include="spp_files\print.css" />
+    <Content Include="spp_files\rte_styles.css" />
+    <Content Include="spp_files\rtp.js" />
+    <Content Include="spp_files\saved_resource%281%29.html" />
+    <Content Include="spp_files\saved_resource.html" />
+    <Content Include="spp_files\search.js" />
+    <Content Include="spp_files\share.js" />
+    <Content Include="spp_files\siteanalyze_1908767.js" />
+    <Content Include="spp_files\Sok-och-hitta.html" />
+    <Content Include="spp_files\sp.core.js" />
+    <Content Include="spp_files\sp.js" />
+    <Content Include="spp_files\sp.runtime.js" />
+    <Content Include="spp_files\sp.ui.dialog.js" />
+    <Content Include="spp_files\widgets.css" />
+    <Content Include="spp_files\widgets.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,10 +250,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="index_files\" />
-    <Folder Include="spp_files\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
