@@ -122,7 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="index_files\" />
-    <Folder Include="Spåra brev, paket och pall_files\" />
+    <Folder Include="spp_files\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
