@@ -467,7 +467,7 @@ var g_isSignedIn = false;
 Det kan bero på: <br><br>
 
 <b>Felaktigt sökbegrepp </b><br>
-Kontrollera uppgifterna och försök igen. <br><br>
+Kontrollera uppgifterna och försök igen... <br><br>
 
 <b>Försändelsen ej registrerad </b><br>
 Försändelsen eller information om försändelsen har inte ankommit till PostNord. <br><br>
